@@ -1,0 +1,1 @@
+This is a semester-long project in Intro to Software Engineering at Kennesaw State University in which group of 4 students works on developing a piece of software for a fictional pizza shop. This project is mainly focused on practicing principles of Software Enineerings such as planning, coordinating, documenting, scheduling, monitoring and adjusting. # SWEPizzaProject
