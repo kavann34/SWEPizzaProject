@@ -9,6 +9,6 @@ public class MainController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Hello World!");
+        welcomeText.setText("Hello Group!");
     }
 }
