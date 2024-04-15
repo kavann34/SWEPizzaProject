@@ -22,5 +22,8 @@
             <Font size="21.0" />
          </font>
       </Text>
+      <TextField fx:id="phoneInput" promptText="Enter phone number" GridPane.rowIndex="1" />
+      <PasswordField fx:id="passwordInput" promptText="Enter password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#onLoginPress" text="Login" GridPane.rowIndex="2" />
    </children>
 </GridPane>
