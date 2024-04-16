@@ -5,25 +5,31 @@
 <?import javafx.scene.text.*?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.LoginPageController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <Button mnemonicParsing="false" onAction="#goToHomePage" text="Go to main screen" />
-      <Button mnemonicParsing="false" onAction="#goToNewAccountPage" text="Go to new account screen" GridPane.columnIndex="1" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login Page" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Text>
-      <TextField fx:id="phoneInput" promptText="Enter phone number" GridPane.rowIndex="1" />
-      <PasswordField fx:id="passwordInput" promptText="Enter password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" onAction="#onLoginPress" text="Login" GridPane.rowIndex="2" />
-   </children>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="112.66666666666667" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.6666590372721" minWidth="10.0" prefWidth="92.66666666666667" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.33333333333334" minWidth="10.0" prefWidth="191.66666666666666" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.66668192545575" minWidth="0.0" prefWidth="0.0" />
+        <ColumnConstraints maxWidth="213.99999999999994" minWidth="73.0" prefWidth="204.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="84.00000381469727" minHeight="10.0" prefHeight="83.00000381469727" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="127.99999237060547" minHeight="10.0" prefHeight="77.99999618530273" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="189.33334859212238" minHeight="10.0" prefHeight="96.00000762939453" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="23.333318074544252" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="24.0" prefWidth="68.0" text="Home " GridPane.columnIndex="1" />
+        <Button mnemonicParsing="false" onAction="#goToNewAccountPage" text="Creat Account" GridPane.columnIndex="4" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in to your P.P account " textAlignment="CENTER" wrappingWidth="227.07227969169617" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+        <TextField promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <TextField prefWidth="164.0" promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" text="Menu" textAlignment="CENTER" GridPane.columnIndex="2" />
+        <PasswordField promptText="Password" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    </children>
 </GridPane>
