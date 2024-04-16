@@ -8,6 +8,21 @@ public class MenuItem {
     protected int price;
     protected String size;
     protected String type;
+
+    @Override
+    public String toString() {
+        StringBuilder item = new StringBuilder();
+        if(getName().equals("Pizza")) {
+            item.append(getSize() + " - " + getType() + " - " + getName() + "\n");
+            for (Topping topping : toppings) {
+                item.append("\t+" + topping + "\n");
+            }
+        }
+        else {
+            item.append(getSize() + " - " + getType() + " - " + getName() + "\n");
+        }
+        return item.toString();
+    }
     public String getType() {
         return type;
     }
