@@ -49,16 +49,4 @@ public class OrderSummaryPageController {
         }
     }
 
-    public void goToOrderListPage(ActionEvent event) {
-        try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("order-list-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
-            stage.show();
-        }catch(IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
