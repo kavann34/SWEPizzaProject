@@ -22,7 +22,7 @@ public class LoginPage extends Application {
 
     public static void main(String[] args) {
         launch();
-        //Account.addAccountToDatabase("Colin", "Pittman", "test", "address", "city", "state", 12345, "678-555-1234", "test@email.com");
+        //here a method will be called to read in the saved orders in orderDatabase.txt
 
     }
 }

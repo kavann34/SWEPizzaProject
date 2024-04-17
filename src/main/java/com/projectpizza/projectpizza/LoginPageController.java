@@ -44,22 +44,5 @@ public class LoginPageController {
             e.printStackTrace();
         }
     }
-    public static void loginController(String phone, String password) {
-        String loginResult = Account.login(phone, password);
-        switch (loginResult) {
-            case "Customer" -> {
 
-            }
-            case "Employee" -> {
-
-            }
-            case "Manager" -> {
-
-            }
-        }
-    }
-
-    public void onLoginPress(ActionEvent actionEvent) {
-        loginController(phoneInput.getText(), passwordInput.getText());
-    }
 }
