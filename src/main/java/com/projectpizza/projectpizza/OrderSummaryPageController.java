@@ -1,10 +1,12 @@
 package com.projectpizza.projectpizza;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -47,6 +49,18 @@ public class OrderSummaryPageController {
         }catch(IOException e) {
             e.printStackTrace();
         }
+    }
+
+    //Pushes array to order summary in list view
+    @FXML
+    private ListView<String> myListView;
+
+    String[] test = {"one", "two", "three", "two", "three", "two", "three"}; //Will be changed to read order's values once menu is complete
+
+    @FXML
+    public void initialize() {
+        myListView.setFocusTraversable(false);
+        myListView.getItems().addAll(test);
     }
 
 }
