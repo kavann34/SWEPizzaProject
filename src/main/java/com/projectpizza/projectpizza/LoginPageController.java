@@ -19,19 +19,6 @@ public class LoginPageController {
     public PasswordField passwordInput;
 
     @FXML
-    protected void goToHomePage(ActionEvent event) {
-        try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("main-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
-            stage.show();
-        }catch(IOException e) {
-            e.printStackTrace();
-        }
-    }
-    @FXML
     protected void goToNewAccountPage(ActionEvent event) {
         try{
             Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("new-account-page.fxml"));
