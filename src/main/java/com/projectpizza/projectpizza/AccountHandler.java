@@ -24,22 +24,19 @@ public class AccountHandler {
      * @param addressCity
      * @param addressState
      * @param addressZip
-     * @param email
      * @return true if operation is successful.
      */
-    public static boolean addAccountToDatabase(String phone, String password, String accountType, String firstName, String lastName, String addressStreet, String addressCity, String addressState, int addressZip, String email) {
+    public static boolean addAccountToDatabase(String phone, String password, String firstName, String lastName, String addressStreet, String addressCity, String addressState, String addressZip) {
         if (accountDatabase != null) {
             try (FileWriter writer = new FileWriter(accountDatabase, true)) {
                 writer.append(phone + ","
                         + password + ","
-                        + accountType + ","
+                        + firstName + ","
                         + lastName + ","
                         + addressStreet + ","
                         + addressCity + ","
                         + addressState + ","
-                        + addressZip + ","
-                        + firstName + ","
-                        + email + "\n");
+                        + addressZip + "\n");
                 return true;
             } catch (IOException e) {
                 e.printStackTrace();
@@ -84,14 +81,12 @@ public class AccountHandler {
      * with the updated version if it found the match, else it does nothing.
      * @param phone
      * @param password
-     * @param accountType
      * @param firstName
      * @param lastName
      * @param addressStreet
      * @param addressCity
      * @param addressState
      * @param addressZip
-     * @param email
      * @return true if update was successful.
      */
     public static boolean updateAccount(String phone, String password, String accountType, String firstName, String lastName, String addressStreet, String addressCity, String addressState, int addressZip, String email){
@@ -104,7 +99,7 @@ public class AccountHandler {
                 String[] data = line.split(",");
 
                 if (data[0].equals(phone)) {
-                    line = phone + "," + password + "," + accountType + "," + lastName + "," + addressStreet + "," + addressCity + "," + addressState + "," + addressZip + "," + firstName + "," + email;
+                    line = phone + "," + password + "," + lastName + "," + addressStreet + "," + addressCity + "," + addressState + "," + addressZip + "," + firstName + "," + email;
                     updatedResult = true;
                 }
 
