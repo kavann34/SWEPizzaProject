@@ -6,10 +6,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Account {
+public class AccountHandler {
     private static final File accountDatabase = new File("accountDatabase.txt");
 
-    public Account() {
+    public AccountHandler() {
     }
 
 
@@ -52,18 +52,20 @@ public class Account {
 
     /**
      * Takes in the phone and password login credentials and scans the accountDatabase text file for a match.
-     *
+     * Also records current user in the Session class.
      * @param phone
      * @param password
-     * @return accountType if login was successful, else "Invalid Password", "Account Does Not Exist", or "Error".
+     * @return "Success" if login was successful, else "Invalid Password", "Account Does Not Exist", or "Error".
      */
     public static String login(String phone, String password) {
+
         try (Scanner scanner = new Scanner(accountDatabase)) {
             while (scanner.hasNextLine()) {
                 String[] data = scanner.nextLine().split(",");
                 if (data[0].equals(phone)) {
                     if (data[1].equals(password)) {
-                        return data[2];
+                        Session.setPhoneNumber(data[0]);
+                        return "Success";
                     }
                     else return "Invalid Password";
                     }
