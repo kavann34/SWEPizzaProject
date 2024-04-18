@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Order {
     private int total;
+    public ArrayList<MenuItem> orderItems = new ArrayList<>();
 
     public String getTotal() {
         int dollars = total/100;
@@ -17,7 +18,6 @@ public class Order {
         }
     }
 
-    public ArrayList<MenuItem> orderItems = new ArrayList<>();
     @Override
     public String toString() {
         StringBuilder orderDetails = new StringBuilder();
