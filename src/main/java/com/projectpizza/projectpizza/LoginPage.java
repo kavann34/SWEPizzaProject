@@ -22,7 +22,7 @@ public class LoginPage extends Application {
 
     public static void main(String[] args) {
         launch();
-        //here a method will be called to read in the saved orders in orderDatabase.txt
+        //a method will be called here to  read in the saved orders in orderDatabase.txt
 
     }
 }
