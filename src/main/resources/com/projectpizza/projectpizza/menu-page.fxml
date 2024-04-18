@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -97,17 +98,44 @@
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$12" GridPane.columnIndex="2" GridPane.rowIndex="5" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$14" GridPane.columnIndex="2" GridPane.rowIndex="6" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$16" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="5">
+        <Button mnemonicParsing="false" text="Extra Cheese" GridPane.columnIndex="4" GridPane.rowIndex="5">
             <GridPane.margin>
                 <Insets right="200.0" />
             </GridPane.margin>
         </Button>
-        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="6">
+        <Button mnemonicParsing="false" text="Extra Cheese" GridPane.columnIndex="4" GridPane.rowIndex="5">
             <GridPane.margin>
+                <Insets right="200.0" />
+            </GridPane.margin>
+        </Button><Button mnemonicParsing="false" text="Tomato " GridPane.columnIndex="4" GridPane.rowIndex="6">
+        <GridPane.margin>
             <Insets right="200.0" />
         </GridPane.margin>
+
     </Button>
-    <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="7">
+        <Button mnemonicParsing="false" text="Pinapple" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets left="200.0" />
+            </GridPane.margin>
+        </Button>
+        <Button mnemonicParsing="false" text="Bacon" GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <GridPane.margin>
+            <Insets left="200.0" />
+        </GridPane.margin>
+        </Button>
+        <Button mnemonicParsing="false" text="Spinach" GridPane.columnIndex="4" GridPane.rowIndex="7">
+            <GridPane.margin>
+                <Insets left="200.0" />
+            </GridPane.margin>
+    </Button>
+        <Button mnemonicParsing="false" text="Sausage" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" text="Pepperoni" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+        <Button mnemonicParsing="false" text="Mushrooms" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+
+        <Button mnemonicParsing="false" text="Red sauce" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+        <Button mnemonicParsing="false" text="Onions" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+        <Button mnemonicParsing="false" text="Black Olives" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+    <Button mnemonicParsing="false" text="Green onions" GridPane.columnIndex="4" GridPane.rowIndex="7">
         <GridPane.margin>
         <Insets right="200.0" />
     </GridPane.margin>
