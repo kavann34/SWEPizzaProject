@@ -1,8 +1,10 @@
 package com.projectpizza.projectpizza;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class OrderHandler {
     private static final File orderDatabase = new File("orderDatabase.txt");
@@ -22,5 +24,17 @@ public class OrderHandler {
             }
         }
         return false;
+    }
+    public static void readOrderDatabase(){
+        try(Scanner sc = new Scanner(orderDatabase)) {
+            String line;
+            String[] split;
+            while(sc.hasNextLine()) {
+                line = sc.nextLine();
+                split = line.split(",");
+
+            }
+        } catch (FileNotFoundException e) {
+        }
     }
 }
