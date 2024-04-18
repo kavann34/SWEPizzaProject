@@ -10,37 +10,37 @@
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="146.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="162.33333333333337" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="38.66666666666663" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="254.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="3.1999999999999886" prefWidth="7.199999999999989" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="286.4" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="124.33333333333333" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="113.00000000000001" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="168.5999961853027" minHeight="10.0" prefHeight="152.59999999999997" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="32.333333333333314" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="53.333333333333314" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="40.60000000000002" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
               <TextFieldListCell alignment="TOP_LEFT" prefHeight="91.0" prefWidth="270.0" text="Order" />
-            <ListView fx:id="myListView" prefHeight="166.0" prefWidth="162.0" />
+            <ListView fx:id="myListView" prefHeight="196.0" prefWidth="162.0" />
          </children>
       </VBox>
-        <Label prefHeight="35.0" prefWidth="151.0" text="Payment" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Label prefHeight="35.0" prefWidth="151.0" text="Payment" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
             <font>
                 <Font size="24.0" />
             </font></Label>
-        <Button mnemonicParsing="false" text="Cash" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <Button mnemonicParsing="false" text="Check" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <TextField promptText="Name On Card" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-        <TextField promptText="Card Number" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-        <TextField promptText="Date" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-        <TextField promptText="CVV" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-        <Button mnemonicParsing="false" text="Finish Order" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa91f" height="100.0" stroke="BLACK" strokeType="INSIDE" width="601.0" />
-        <Button mnemonicParsing="false" text="Home" GridPane.columnIndex="1" />
+        <Button mnemonicParsing="false" text="Cash" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+        <Button mnemonicParsing="false" text="Check" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+        <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <TextField maxWidth="-Infinity" prefWidth="250.0" promptText="Card Number" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <TextField maxWidth="-Infinity" prefWidth="75.0" promptText="Date" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" text="Submit Order" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa91f" height="69.0" stroke="BLACK" strokeType="INSIDE" width="601.0" />
+        <Button mnemonicParsing="false" onAction="#goToMainPage" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
         <Button mnemonicParsing="false" onAction="#goToMenuPage" prefHeight="25.0" prefWidth="50.0" text="Menu" GridPane.columnIndex="3" />
     </children>
 </GridPane>
