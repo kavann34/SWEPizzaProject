@@ -5,11 +5,43 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MenuPageController {
+    public Button addToOrderButton;
+    public Button tenInchSizeButton;
+    public Button thinCrustButton;
+    public Button regularCrustButton;
+    public Button deepDishCrustButton;
+    public Button sixteenInchSizeButton;
+    public Button twelveInchSizeButton;
+    public Button fourteenInchSizeButton;
+    public CheckBox extraCheeseCheckbox;
+    public CheckBox pepperoniCheckbox;
+    public CheckBox sausageCheckbox;
+    public CheckBox mushroomsCheckbox;
+    public CheckBox baconCheckbox;
+    public CheckBox peppersCheckbox;
+    public CheckBox pineappleCheckbox;
+    public CheckBox spinachCheckbox;
+    public CheckBox extraSauceCheckbox;
+    public CheckBox onionsCheckbox;
+    public CheckBox tomatoCheckbox;
+    public CheckBox olivesCheckbox;
+    public Button smallSizeDrinkButton;
+    public Button mediumSizeDrinkButton;
+    public Button largeSizeDrinkButton;
+    public CheckBox spriteCheckbox;
+    public CheckBox fantaCheckbox;
+    public CheckBox cokeCheckbox;
+    public CheckBox waterCheckbox;
+    public CheckBox teaCheckbox;
+    public CheckBox lemonadeCheckbox;
+
     public void goToMainPage(ActionEvent event) {
     }
 
