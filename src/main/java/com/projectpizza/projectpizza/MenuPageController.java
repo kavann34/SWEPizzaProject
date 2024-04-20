@@ -47,11 +47,11 @@ public class MenuPageController {
 
     public void goToLoginPage(ActionEvent event) {
         try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
+            Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
+            Scene loginPageScene = new Scene(loginPageSceneRoot);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
+            stage.setScene(loginPageScene);
             stage.show();
         }catch(IOException e) {
             e.printStackTrace();
@@ -61,11 +61,11 @@ public class MenuPageController {
 
     public void goToOrderSummaryPage(ActionEvent event) {
         try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("order-summary-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
+            Parent orderSummarySceneRoot = FXMLLoader.load(getClass().getResource("order-summary-page.fxml"));
+            Scene orderSummaryScene = new Scene(orderSummarySceneRoot);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
+            stage.setScene(orderSummaryScene);
             stage.show();
         }catch(IOException e) {
             e.printStackTrace();
@@ -73,5 +73,8 @@ public class MenuPageController {
     }
 
     public void onAddToOrderPress(ActionEvent event) {
+    }
+
+    public void onLogoutButtonPress(ActionEvent event) {
     }
 }

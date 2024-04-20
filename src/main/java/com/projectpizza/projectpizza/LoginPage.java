@@ -12,7 +12,7 @@ public class LoginPage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("login-page.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Project Pizza");
         stage.setScene(scene);
         stage.show();

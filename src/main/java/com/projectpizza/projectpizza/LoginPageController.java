@@ -6,16 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class LoginPageController {
 
@@ -24,18 +21,19 @@ public class LoginPageController {
     @FXML
     public PasswordField passwordInput;
     @FXML
-    public TextArea errorText;
+    
 
     private static final File accountDatabase = new File("accountDatabase.txt");
+    public Text errorText;
 
     @FXML
     protected void goToNewAccountPage(ActionEvent event) {
         try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("new-account-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
+            Parent newAccountPageRoot = FXMLLoader.load(getClass().getResource("new-account-page.fxml"));
+            Scene newAccountPageScene = new Scene(newAccountPageRoot, 800, 600);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
+            stage.setScene(newAccountPageScene);
             stage.show();
         }catch(IOException e) {
             e.printStackTrace();
@@ -44,18 +42,18 @@ public class LoginPageController {
 
     public void goToMenu(ActionEvent event) {
         try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
+            Parent menuPageSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
+            Scene menuPageScene = new Scene(menuPageSceneRoot, 800, 600);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
+            stage.setScene(menuPageScene);
             stage.show();
         }catch(IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void logIn(ActionEvent event) {
+    public void onLoginButtonPress(ActionEvent event) {
         String logInResult = AccountHandler.login(phoneInput.getText().toString(), passwordInput.getText().toString());
         if(logInResult.equals("Success")) {
             goToMenu(event);

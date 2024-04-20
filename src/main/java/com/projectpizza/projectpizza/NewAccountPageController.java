@@ -43,14 +43,17 @@ public class NewAccountPageController {
         Session.setPhoneNumber(phoneInput.getText());
 
         try{
-            Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
-            Scene textEditorScene = new Scene(textEditorSceneRoot);
+            Parent menuPageSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
+            Scene menupageScene = new Scene(menuPageSceneRoot, 800, 600);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(textEditorScene);
+            stage.setScene(menupageScene);
             stage.show();
         }catch(IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void onBackButtonPress(ActionEvent event) {
     }
 }
