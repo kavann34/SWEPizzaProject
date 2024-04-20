@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -58,7 +57,7 @@ public class MenuPageController {
         }
     }
 
-    public void onAddToOrderPress(ActionEvent event) {
+    public void onPizzaAddToOrderPress(ActionEvent event) {
 
     }
 
@@ -90,5 +89,8 @@ public class MenuPageController {
 
     public void onSixteenInchRadioPress(ActionEvent event) {
         regularCrustRadio.fire();
+    }
+
+    public void onDrinkAddToOrderPress(ActionEvent event) {
     }
 }

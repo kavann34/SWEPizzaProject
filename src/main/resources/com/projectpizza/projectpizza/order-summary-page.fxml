@@ -17,8 +17,8 @@
       </ImageView>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
           <columnConstraints>
-              <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="50.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="304.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="9.0" prefWidth="9.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="344.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="0.0" prefWidth="0.0" />
               <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="132.0" />
               <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
@@ -39,7 +39,7 @@
           <children>
               <VBox prefHeight="321.0" prefWidth="586.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="1">
                   <children>
-                      <TextFieldListCell alignment="TOP_LEFT" prefHeight="28.0" prefWidth="742.0" text="Your current order:">
+                      <TextFieldListCell alignment="TOP_LEFT" prefHeight="28.0" prefWidth="782.0" text="Your current order:">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
