@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.cell.TextFieldListCell?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.OrderSummaryPageController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.OrderSummaryPageController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="50.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="356.0" />
@@ -65,11 +58,11 @@
         <TextField maxWidth="-Infinity" prefWidth="75.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
         <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
         <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="131.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa91f" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
         <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" text="Logout" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" />
         <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER">
             <font>
-                <Font size="39.0" />
+                <Font name="System Bold" size="36.0" />
             </font></Label>
         <Button mnemonicParsing="false" onAction="#onMenuButtonPress" prefHeight="25.0" prefWidth="50.0" text="Menu" GridPane.columnIndex="8" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pay with credit:" translateY="-20.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">

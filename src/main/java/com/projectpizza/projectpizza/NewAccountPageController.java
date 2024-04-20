@@ -26,9 +26,19 @@ public class NewAccountPageController {
     public Text passwordErrorText;
 
     public void onSubmitButtonPress(ActionEvent event) {
-        if (passwordInput.getText().isEmpty() ||
+        if(phoneInput.getText().isEmpty() ||
+                lastNameInput.getText().isEmpty() ||
+                passwordInput.getText().isEmpty() ||
                 passwordConfirmationInput.getText().isEmpty() ||
-                !passwordInput.getText().equals(passwordConfirmationInput.getText())) {
+                firstNameInput.getText().isEmpty() ||
+                addressStreetInput.getText().isEmpty() ||
+                addressCityInput.getText().isEmpty() ||
+                addressStateInput.getText().isEmpty() ||
+                addressZipInput.getText().isEmpty()) {
+            passwordErrorText.setText("Please fill in all user information fields.");
+            return;
+        }
+        if (!passwordInput.getText().equals(passwordConfirmationInput.getText())) {
             passwordErrorText.setText("Passwords do not match or are invalid.");
             return;
         }

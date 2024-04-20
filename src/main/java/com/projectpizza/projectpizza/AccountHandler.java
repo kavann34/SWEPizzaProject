@@ -11,8 +11,6 @@ public class AccountHandler {
 
     public AccountHandler() {
     }
-
-
     /**
      * Takes in all the account parameters and appends it to the accountDatabase file in a new line.
      *
@@ -55,7 +53,9 @@ public class AccountHandler {
      * @return "Success" if login was successful, else "Invalid Password", "Account Does Not Exist", or "Error".
      */
     public static String login(String phone, String password) {
-
+        if(phone.equals("") || password.equals("")) {
+            return "Please fill in both the username and password fields.";
+        }
         try (Scanner scanner = new Scanner(accountDatabase)) {
             while (scanner.hasNextLine()) {
                 String[] data = scanner.nextLine().split(",");

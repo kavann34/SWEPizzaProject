@@ -1,54 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.LoginPageController">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="112.66666666666667" />
-        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="218.6666590372721" minWidth="10.0" prefWidth="92.66666666666667" />
-        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="244.33333333333334" minWidth="10.0" prefWidth="191.66666666666666" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.66668192545575" minWidth="0.0" prefWidth="0.0" />
-        <ColumnConstraints maxWidth="213.99999999999994" minWidth="73.0" prefWidth="204.0" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints maxHeight="84.00000381469727" minHeight="10.0" prefHeight="83.00000381469727" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="189.33334859212238" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="189.33334859212238" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="23.333318074544252" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
-    </rowConstraints>
-    <children>
-        <Button mnemonicParsing="false" onAction="#goToNewAccountPage" text="Create Account" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your information:" textAlignment="CENTER" wrappingWidth="227.07227969169617" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-            <font>
-                <Font size="21.0" />
-            </font>
-        </Text>
-        <TextField fx:id="phoneInput" onAction="#onPhoneReturnPress" promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-        <PasswordField fx:id="passwordInput" onAction="#onPasswordReturnPress" promptText="Password" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
-         <children>
-            <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onLoginButtonPress" prefHeight="44.0" prefWidth="90.0" text="Log In">
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.LoginPageController">
+   <children>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+          <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="112.66666666666667" />
+              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="218.6666590372721" minWidth="10.0" prefWidth="92.66666666666667" />
+              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="244.33333333333334" minWidth="10.0" prefWidth="191.66666666666666" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.66668192545575" minWidth="0.0" prefWidth="0.0" />
+              <ColumnConstraints maxWidth="213.99999999999994" minWidth="73.0" prefWidth="204.0" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints maxHeight="73.8" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <children>
+              <Button mnemonicParsing="false" onAction="#goToNewAccountPage" text="Create Account" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your login information:" textAlignment="CENTER" wrappingWidth="369.07227969169617" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                  <font>
+                      <Font size="21.0" />
+                  </font>
+              </Text>
+              <TextField fx:id="phoneInput" onAction="#onPhoneReturnPress" promptText="Phone Number" translateY="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+              <PasswordField fx:id="passwordInput" onAction="#onPasswordReturnPress" promptText="Password" translateY="-10.0" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Project Pizza" textAlignment="CENTER" wrappingWidth="504.07227969169617" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Text>
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onLoginButtonPress" prefHeight="44.0" prefWidth="90.0" text="Log In" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="21.0" />
-               </font></Button>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <GridPane.margin>
-            <Insets top="10.0" />
-         </GridPane.margin>
-      </VBox>
-      <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Project Pizza" textAlignment="CENTER" wrappingWidth="227.07227969169617" GridPane.columnIndex="2" GridPane.rowIndex="1">
-         <font>
-            <Font size="38.0" />
-         </font>
-      </Text>
-    </children>
-</GridPane>
+               </font>
+            </Button>
+            <StackPane prefHeight="150.0" prefWidth="200.0" />
+          </children>
+      </GridPane>
+   </children>
+</StackPane>

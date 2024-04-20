@@ -18,7 +18,7 @@
       <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="177.33331298828125" minWidth="10.0" prefWidth="140.0" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints maxHeight="43.4" minHeight="10.0" prefHeight="43.333343505859375" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="73.8" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="51.400000000000006" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="66.00001017252603" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
         <RowConstraints maxHeight="56.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -34,10 +34,10 @@
       <RowConstraints maxHeight="76.59999999999997" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="244.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="4" />
-      <Circle fill="#b7b7b7" radius="32.0" stroke="BLACK" strokeType="INSIDE" translateX="3.0" translateY="-11.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="176.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="9" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="45.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ffa1" height="244.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="4" />
+      <Circle fill="#cd914d" radius="32.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" translateY="-11.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ffa1" height="176.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="9" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
         <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="33.0" prefWidth="105.0" text="Logout" GridPane.columnIndex="7" GridPane.halignment="LEFT">
             <GridPane.margin>
                 <Insets left="10.0" />
@@ -68,17 +68,17 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Circle fill="#b1b2b3" radius="16.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+      <Circle fill="#cd914d" radius="16.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets right="10.0" />
          </GridPane.margin>
       </Circle>
-      <Circle fill="#adaeae" radius="20.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+      <Circle fill="#cd914d" radius="20.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets right="10.0" />
          </GridPane.margin>
       </Circle>
-      <Circle fill="#b7b7b7" radius="27.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+      <Circle fill="#cd914d" radius="27.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
@@ -207,6 +207,11 @@
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza size:" translateX="5.0" translateY="-2.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <font>
             <Font size="15.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" GridPane.columnIndex="2">
+         <font>
+            <Font name="System Bold" size="36.0" />
          </font>
       </Text>
     </children>
