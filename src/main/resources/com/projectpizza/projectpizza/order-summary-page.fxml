@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.OrderSummaryPageController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.OrderSummaryPageController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="50.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="356.0" />
@@ -38,7 +38,10 @@
     <children>
         <VBox prefHeight="321.0" prefWidth="586.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="1">
             <children>
-                <TextFieldListCell alignment="TOP_LEFT" prefHeight="23.0" prefWidth="444.0" text="Your current order:" />
+                <TextFieldListCell alignment="TOP_LEFT" prefHeight="23.0" prefWidth="444.0" text="Your current order:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextFieldListCell>
             <TextArea fx:id="orderTextArea" prefHeight="293.0" prefWidth="484.0">
                <VBox.margin>
                   <Insets right="10.0" />
@@ -49,19 +52,25 @@
             </TextArea>
             </children>
         </VBox>
-        <Label prefHeight="35.0" prefWidth="183.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-            <font>
-                <Font size="24.0" />
-            </font></Label>
-        <Button mnemonicParsing="false" text="Pay with cash" translateX="-50.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Pay with check" translateX="50.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Pay with cash" translateX="-10.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Pay with check" translateX="10.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
         <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP" />
         <TextField maxWidth="-Infinity" prefWidth="250.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
         <TextField maxWidth="-Infinity" prefWidth="75.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
         <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-        <Button mnemonicParsing="false" text="Submit Order" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="131.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa91f" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
         <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" text="Logout" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" />
+        <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <font>
+                <Font size="39.0" />
+            </font></Label>
         <Button mnemonicParsing="false" onAction="#onMenuButtonPress" prefHeight="25.0" prefWidth="50.0" text="Menu" GridPane.columnIndex="8" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pay with credit:" translateY="-20.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <font>

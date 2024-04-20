@@ -7,19 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MenuPageController {
-    public Button addToOrderButton;
-    public Button tenInchSizeButton;
-    public Button thinCrustButton;
-    public Button regularCrustButton;
-    public Button deepDishCrustButton;
-    public Button sixteenInchSizeButton;
-    public Button twelveInchSizeButton;
-    public Button fourteenInchSizeButton;
     public CheckBox extraCheeseCheckbox;
     public CheckBox pepperoniCheckbox;
     public CheckBox sausageCheckbox;
@@ -32,15 +26,22 @@ public class MenuPageController {
     public CheckBox onionsCheckbox;
     public CheckBox tomatoCheckbox;
     public CheckBox olivesCheckbox;
-    public Button smallSizeDrinkButton;
-    public Button mediumSizeDrinkButton;
-    public Button largeSizeDrinkButton;
     public CheckBox spriteCheckbox;
     public CheckBox fantaCheckbox;
     public CheckBox cokeCheckbox;
     public CheckBox waterCheckbox;
     public CheckBox teaCheckbox;
     public CheckBox lemonadeCheckbox;
+    public RadioButton tenInchSizeRadio;
+    public ToggleGroup pizzaSize;
+    public RadioButton twelveInchSizeRadio;
+    public RadioButton fourteenInchSizeRadio;
+    public RadioButton sixteenInchSizeRadio;
+    public RadioButton smallDrinkRadio;
+    public ToggleGroup drinkSize;
+    public RadioButton mediumDrinkRadio;
+    public RadioButton largeDrinkRadio;
+    public ToggleGroup crustType;
 
     public void goToMainPage(ActionEvent event) {
     }
@@ -73,8 +74,10 @@ public class MenuPageController {
     }
 
     public void onAddToOrderPress(ActionEvent event) {
+
     }
 
     public void onLogoutButtonPress(ActionEvent event) {
+
     }
 }
