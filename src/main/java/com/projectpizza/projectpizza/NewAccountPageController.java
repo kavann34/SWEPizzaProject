@@ -55,5 +55,15 @@ public class NewAccountPageController {
     }
 
     public void onBackButtonPress(ActionEvent event) {
+        try{
+            Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
+            Scene loginPageScene = new Scene(loginPageSceneRoot);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(loginPageScene);
+            stage.show();
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 }

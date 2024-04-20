@@ -12,7 +12,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class OrderSummaryPageController {
-    public void onLogoutButtonPress(ActionEvent event) {//this code can be re-purposed for the logout button code
+    public void onLogoutButtonPress(ActionEvent event) {
+        Session.setPhoneNumber("");
         try{
             Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
             Scene loginPageScene = new Scene(loginPageSceneRoot, 800, 600);

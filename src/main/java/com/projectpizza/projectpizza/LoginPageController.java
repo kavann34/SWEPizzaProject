@@ -62,4 +62,12 @@ public class LoginPageController {
         }
 
     }
+
+    public void onPhoneReturnPress(ActionEvent event) {
+        onLoginButtonPress(event);
+    }
+
+    public void onPasswordReturnPress(ActionEvent event) {
+        onLoginButtonPress(event);
+    }
 }

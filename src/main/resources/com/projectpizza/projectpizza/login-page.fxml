@@ -28,8 +28,8 @@
                 <Font size="21.0" />
             </font>
         </Text>
-        <TextField fx:id="phoneInput" promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-        <PasswordField fx:id="passwordInput" promptText="Password" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <TextField fx:id="phoneInput" onAction="#onPhoneReturnPress" promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+        <PasswordField fx:id="passwordInput" onAction="#onPasswordReturnPress" promptText="Password" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <children>
             <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onLoginButtonPress" prefHeight="44.0" prefWidth="90.0" text="Log In">

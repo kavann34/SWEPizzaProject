@@ -45,24 +45,6 @@ public class MenuPageController {
     public RadioButton thinCrustRadio;
     public RadioButton regularCrustRadio;
     public RadioButton deepDishRadio;
-
-    public void goToMainPage(ActionEvent event) {
-    }
-
-    public void goToLoginPage(ActionEvent event) {
-        try{
-            Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
-            Scene loginPageScene = new Scene(loginPageSceneRoot);
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(loginPageScene);
-            stage.show();
-        }catch(IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
     public void goToOrderSummaryPage(ActionEvent event) {
         try{
             Parent orderSummarySceneRoot = FXMLLoader.load(getClass().getResource("order-summary-page.fxml"));
@@ -77,11 +59,21 @@ public class MenuPageController {
     }
 
     public void onAddToOrderPress(ActionEvent event) {
-    regularCrustRadio.fire();
+
     }
 
     public void onLogoutButtonPress(ActionEvent event) {
+        Session.setPhoneNumber("");
+        try{
+            Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
+            Scene loginPageScene = new Scene(loginPageSceneRoot);
 
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(loginPageScene);
+            stage.show();
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onTenInchRadioSelect(ActionEvent event) {
