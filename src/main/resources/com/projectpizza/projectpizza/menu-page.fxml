@@ -2,220 +2,338 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.MenuPageController">
-    <columnConstraints>
-      <ColumnConstraints minWidth="10.0" prefWidth="140.0" />
-        <ColumnConstraints />
-      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="140.0" />
-      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="66.0" />
-        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="140.0" />
-        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="9999.0" minWidth="10.0" prefWidth="140.0" />
-      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="177.33331298828125" minWidth="10.0" prefWidth="140.0" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints maxHeight="73.8" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="51.400000000000006" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="66.00001017252603" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="56.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="57.99997965494791" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="83.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="59.33331298828125" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="54.400000000000006" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="46.39999999999998" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="76.59999999999997" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="76.59999999999997" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-    </rowConstraints>
-    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ffa1" height="244.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="4" />
-      <Circle fill="#cd914d" radius="32.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" translateY="-11.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ffa1" height="176.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="9" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-        <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="33.0" prefWidth="105.0" text="Logout" GridPane.columnIndex="7" GridPane.halignment="LEFT">
-            <GridPane.margin>
-                <Insets left="10.0" />
-            </GridPane.margin>
-         <font>
-            <Font size="15.0" />
-         </font></Button>
-        <Button layoutX="210.0" layoutY="64.0" mnemonicParsing="false" onAction="#goToOrderSummaryPage" prefHeight="33.0" prefWidth="100.0" text="Go To Cart" GridPane.columnIndex="6" GridPane.halignment="RIGHT">
-            <GridPane.margin>
-                <Insets right="10.0" />
-            </GridPane.margin>
-         <font>
-            <Font size="15.0" />
-         </font></Button>
-        <Button layoutX="286.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAddToOrderPress" prefHeight="42.0" prefWidth="122.0" text="Add to Order" GridPane.columnIndex="6" GridPane.rowIndex="13">
-            <font>
-                <Font size="16.0" />
-            </font>
-            <GridPane.margin>
-                <Insets bottom="15.0" />
-            </GridPane.margin>
-        </Button>
-      <Label prefHeight="32.0" prefWidth="88.0" text=" Pizza" GridPane.rowIndex="2">
+<StackPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.MenuPageController">
+   <children>
+      <ImageView fitHeight="635.0" fitWidth="823.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+          <columnConstraints>
+            <ColumnConstraints minWidth="10.0" prefWidth="140.0" />
+              <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="66.0" />
+              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="140.0" />
+              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="9999.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="177.33331298828125" minWidth="10.0" prefWidth="121.0" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints maxHeight="73.8" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="51.400000000000006" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="66.00001017252603" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="56.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="57.99997965494791" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="83.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="59.33331298828125" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.599999999999994" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="46.39999999999998" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="76.59999999999997" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="76.59999999999997" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ffa1" height="244.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ffa1" height="176.0" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.rowIndex="9" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="72.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="47.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="1.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="56.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="3.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="70.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+              <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="33.0" prefWidth="105.0" text="Logout" GridPane.columnIndex="7" GridPane.halignment="LEFT">
+                  <GridPane.margin>
+                      <Insets left="10.0" />
+                  </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+              <Button layoutX="210.0" layoutY="64.0" mnemonicParsing="false" onAction="#goToOrderSummaryPage" prefHeight="33.0" prefWidth="100.0" text="Go To Cart" GridPane.columnIndex="6" GridPane.halignment="RIGHT">
+                  <GridPane.margin>
+                      <Insets right="10.0" />
+                  </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+              <Button layoutX="286.0" layoutY="14.0" maxHeight="42.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onAddToOrderPress" prefHeight="42.0" prefWidth="122.0" text="Add to Order" GridPane.columnIndex="7" GridPane.rowIndex="11">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+                  <GridPane.margin>
+                      <Insets bottom="15.0" />
+                  </GridPane.margin>
+              </Button>
+            <Label prefHeight="32.0" prefWidth="88.0" text=" Pizza" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Circle fill="#cd914d" radius="32.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Circle fill="#cd914d" radius="15.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="-1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Circle fill="#cd914d" radius="19.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Circle fill="#cd914d" radius="26.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" translateY="7.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Circle>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$12" translateX="5.0" translateY="3.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="16&quot;" translateX="1.0" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="14&quot;" translateX="2.0" translateY="6.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="extraCheeseCheckbox" mnemonicParsing="false" text="Extra Cheese" translateY="10.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="pepperoniCheckbox" mnemonicParsing="false" text="Pepperoni" translateX="-17.0" translateY="10.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="pineappleCheckbox" mnemonicParsing="false" text="Pineapple" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="spinachCheckbox" mnemonicParsing="false" prefHeight="17.0" prefWidth="87.0" text="Spinach" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="extraSauceCheckbox" mnemonicParsing="false" text="Extra Sauce" translateX="8.0" translateY="-25.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label text="Drinks" translateX="5.0" translateY="5.0" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="spriteCheckbox" alignment="CENTER" mnemonicParsing="false" text="Sprite" translateX="-13.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="fantaCheckbox" mnemonicParsing="false" text="Fanta" translateX="-16.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cokeCheckbox" mnemonicParsing="false" text="Coke" translateX="-12.0" GridPane.columnIndex="6" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="waterCheckbox" mnemonicParsing="false" text="Water" translateX="-7.0" GridPane.columnIndex="6" GridPane.rowIndex="10" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="teaCheckbox" mnemonicParsing="false" text="Tea" GridPane.columnIndex="7" GridPane.rowIndex="10" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="lemonadeCheckbox" mnemonicParsing="false" text="Lemonade" GridPane.columnIndex="7" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <Label ellipsisString="" prefHeight="19.0" prefWidth="39.0" text="12&quot;" translateX="10.0" translateY="1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label ellipsisString="" prefHeight="19.0" prefWidth="29.0" text="10&quot;" translateX="5.0" translateY="-6.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$10" translateX="5.0" translateY="7.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$14" translateX="5.0" translateY="6.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$16" translateX="5.0" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="132.0" text="Toppings 50 cents/ea." translateY="-5.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="tomatoCheckbox" mnemonicParsing="false" text="Tomato" translateX="-6.0" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="mushroomsCheckbox" mnemonicParsing="false" text="Mushrooms" translateX="-12.0" translateY="10.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="baconCheckbox" mnemonicParsing="false" text="Bacon" translateX="-10.0" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="sausageCheckbox" mnemonicParsing="false" text="Sausage" translateX="-4.0" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="peppersCheckbox" mnemonicParsing="false" text="Peppers" translateX="-38.0" translateY="-25.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="onionsCheckbox" mnemonicParsing="false" text="Onions" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="olivesCheckbox" mnemonicParsing="false" text="Olives" translateY="-25.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <RadioButton fx:id="tenInchSizeRadio" mnemonicParsing="false" onAction="#onTenInchRadioSelect" translateX="4.0" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pizzaSize" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="twelveInchSizeRadio" mnemonicParsing="false" onAction="#onTwelveInchRadioSelect" toggleGroup="$pizzaSize" translateX="4.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+            <RadioButton fx:id="fourteenInchSizeRadio" mnemonicParsing="false" onAction="#onFourteenInchRadioSelect" toggleGroup="$pizzaSize" translateX="4.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <RadioButton fx:id="sixteenInchSizeRadio" mnemonicParsing="false" onAction="#onSixteenInchRadioPress" toggleGroup="$pizzaSize" translateX="4.0" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+            <RadioButton fx:id="smallDrinkRadio" mnemonicParsing="false" text="Small" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="drinkSize" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mediumDrinkRadio" mnemonicParsing="false" text="Medium" toggleGroup="$drinkSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="largeDrinkRadio" mnemonicParsing="false" text="Large" toggleGroup="$drinkSize" translateY="6.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="BASELINE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$2" translateX="10.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$3" translateX="10.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="29.0" text="\$4" translateX="10.0" translateY="-3.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="thinCrustRadio" mnemonicParsing="false" text="Thin Crust" translateX="5.0" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <toggleGroup>
+                  <ToggleGroup fx:id="crustType" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="regularCrustRadio" mnemonicParsing="false" text="Regular Crust" toggleGroup="$crustType" translateX="5.0" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="deepDishRadio" mnemonicParsing="false" text="Deep Dish" toggleGroup="$crustType" translateX="5.0" translateY="-15.0" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Drink size:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Crust type:" translateX="8.0" translateY="-11.0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza size:" translateX="5.0" translateY="-9.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Button maxHeight="33.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onAddToOrderPress" prefHeight="42.0" prefWidth="120.0" text="Add to Order" translateY="-6.0" GridPane.columnIndex="7" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+          </children>
          <opaqueInsets>
-            <Insets />
+            <Insets right="5.0" />
          </opaqueInsets>
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Circle fill="#cd914d" radius="16.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="10.0" />
-         </GridPane.margin>
-      </Circle>
-      <Circle fill="#cd914d" radius="20.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets right="10.0" />
-         </GridPane.margin>
-      </Circle>
-      <Circle fill="#cd914d" radius="27.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-      </Circle>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$12" translateY="4.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label text="16&quot;" translateX="1.0" translateY="-21.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></Label>
-      <Label text="14&quot;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></Label>
-      <CheckBox fx:id="extraCheeseCheckbox" mnemonicParsing="false" text="Extra Cheese" translateY="10.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
-         <GridPane.margin>
-            <Insets right="5.0" />
-         </GridPane.margin>
-      </CheckBox>
-      <CheckBox fx:id="pepperoniCheckbox" mnemonicParsing="false" text="Pepperoni" translateX="-13.0" translateY="10.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets right="5.0" />
-         </GridPane.margin>
-      </CheckBox>
-      <CheckBox fx:id="pineappleCheckbox" mnemonicParsing="false" text="Pineapple" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-      <CheckBox fx:id="spinachCheckbox" mnemonicParsing="false" prefHeight="17.0" prefWidth="87.0" text="Spinach" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-      <CheckBox fx:id="extraSauceCheckbox" mnemonicParsing="false" text="Extra Sauce" translateX="8.0" translateY="-25.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-      <Label text="Drinks" translateX="5.0" translateY="5.0" GridPane.rowIndex="7">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <CheckBox fx:id="spriteCheckbox" alignment="CENTER" mnemonicParsing="false" text="Sprite" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
-      <CheckBox fx:id="fantaCheckbox" mnemonicParsing="false" text="Fanta" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="TOP" />
-      <CheckBox fx:id="cokeCheckbox" mnemonicParsing="false" text="Coke" GridPane.columnIndex="6" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
-      <CheckBox fx:id="waterCheckbox" mnemonicParsing="false" text="Water" GridPane.columnIndex="6" GridPane.rowIndex="10" GridPane.valignment="TOP" />
-      <CheckBox fx:id="teaCheckbox" mnemonicParsing="false" text="Tea" GridPane.columnIndex="7" GridPane.rowIndex="10" GridPane.valignment="TOP" />
-      <CheckBox fx:id="lemonadeCheckbox" mnemonicParsing="false" text="Lemonade" GridPane.columnIndex="7" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
-      <Label ellipsisString="" prefHeight="19.0" prefWidth="39.0" text="12&quot;" translateX="10.0" translateY="1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label ellipsisString="" prefHeight="19.0" prefWidth="29.0" text="10&quot;" translateX="5.0" translateY="-5.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$10" translateY="9.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$14" translateY="4.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$16" translateY="-20.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label prefHeight="19.0" prefWidth="132.0" text="Toppings 50 cents/ea" GridPane.columnIndex="6" GridPane.rowIndex="1">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <CheckBox fx:id="tomatoCheckbox" mnemonicParsing="false" text="Tomato" translateX="-2.0" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-      <CheckBox fx:id="mushroomsCheckbox" mnemonicParsing="false" text="Mushrooms" translateX="-10.0" translateY="10.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-      <CheckBox fx:id="baconCheckbox" mnemonicParsing="false" text="Bacon" translateX="-5.0" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-      <CheckBox fx:id="sausageCheckbox" mnemonicParsing="false" text="Sausage" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-      <CheckBox fx:id="peppersCheckbox" mnemonicParsing="false" text="Peppers" translateX="-30.0" translateY="-25.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-      <CheckBox fx:id="onionsCheckbox" mnemonicParsing="false" text="Onions" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-      <CheckBox fx:id="olivesCheckbox" mnemonicParsing="false" text="Olvies" translateY="-25.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-      <RadioButton fx:id="tenInchSizeRadio" mnemonicParsing="false" onAction="#onTenInchRadioSelect" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-         <toggleGroup>
-            <ToggleGroup fx:id="pizzaSize" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="twelveInchSizeRadio" mnemonicParsing="false" onAction="#onTwelveInchRadioSelect" toggleGroup="$pizzaSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
-      <RadioButton fx:id="fourteenInchSizeRadio" mnemonicParsing="false" onAction="#onFourteenInchRadioSelect" toggleGroup="$pizzaSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
-      <RadioButton fx:id="sixteenInchSizeRadio" mnemonicParsing="false" onAction="#onSixteenInchRadioPress" toggleGroup="$pizzaSize" translateY="-21.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
-      <RadioButton fx:id="smallDrinkRadio" mnemonicParsing="false" text="Small" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-         <toggleGroup>
-            <ToggleGroup fx:id="drinkSize" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="mediumDrinkRadio" mnemonicParsing="false" text="Medium" toggleGroup="$drinkSize" translateX="7.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-      <RadioButton fx:id="largeDrinkRadio" mnemonicParsing="false" text="Large" toggleGroup="$drinkSize" translateY="6.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="BASELINE" />
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$2" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$3" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$4" translateY="-3.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <RadioButton fx:id="thinCrustRadio" mnemonicParsing="false" text="Thin Crust" translateX="5.0" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
-         <toggleGroup>
-            <ToggleGroup fx:id="crustType" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="regularCrustRadio" mnemonicParsing="false" text="Regular Crust" toggleGroup="$crustType" translateX="5.0" GridPane.rowIndex="4" />
-      <RadioButton fx:id="deepDishRadio" mnemonicParsing="false" text="Deep Dish" toggleGroup="$crustType" translateX="5.0" translateY="-20.0" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Drink size:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Crust type:" translateX="4.0" translateY="-5.0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza size:" translateX="5.0" translateY="-2.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" GridPane.columnIndex="2">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Text>
-    </children>
-   <opaqueInsets>
-      <Insets right="5.0" />
-   </opaqueInsets>
-</GridPane>
+      </GridPane>
+   </children>
+</StackPane>

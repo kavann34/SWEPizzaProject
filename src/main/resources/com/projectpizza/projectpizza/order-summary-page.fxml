@@ -3,72 +3,98 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.OrderSummaryPageController">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="50.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="356.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="0.0" prefWidth="13.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="146.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="100.0" />
-    </columnConstraints>
-    <rowConstraints>
-      <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="323.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="256.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="188.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-    </rowConstraints>
-    <children>
-        <VBox prefHeight="321.0" prefWidth="586.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="1">
-            <children>
-                <TextFieldListCell alignment="TOP_LEFT" prefHeight="23.0" prefWidth="444.0" text="Your current order:">
+<StackPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectpizza.projectpizza.OrderSummaryPageController">
+   <children>
+      <ImageView fitHeight="635.0" fitWidth="823.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+          <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="304.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="0.0" prefWidth="0.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="132.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="8.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="55.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="17.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="125.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="73.8" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="323.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="256.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="188.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <children>
+              <VBox prefHeight="321.0" prefWidth="586.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="1">
+                  <children>
+                      <TextFieldListCell alignment="TOP_LEFT" prefHeight="28.0" prefWidth="742.0" text="Your current order:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextFieldListCell>
+                  <TextArea fx:id="orderTextArea" opacity="0.8" prefHeight="293.0" prefWidth="484.0">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextArea>
+                  </children>
+              </VBox>
+              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Pay with cash" translateX="-10.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
                <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></TextFieldListCell>
-            <TextArea fx:id="orderTextArea" prefHeight="293.0" prefWidth="484.0">
-               <VBox.margin>
-                  <Insets right="10.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="16.0" />
                </font>
-            </TextArea>
-            </children>
-        </VBox>
-        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Pay with cash" translateX="-10.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Pay with check" translateX="10.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-        <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP" />
-        <TextField maxWidth="-Infinity" prefWidth="250.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-        <TextField maxWidth="-Infinity" prefWidth="75.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
-        <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-        <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="131.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="67.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-        <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" text="Logout" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" />
-        <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER">
-            <font>
-                <Font name="System Bold" size="36.0" />
-            </font></Label>
-        <Button mnemonicParsing="false" onAction="#onMenuButtonPress" prefHeight="25.0" prefWidth="50.0" text="Menu" GridPane.columnIndex="8" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pay with credit:" translateY="-20.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-    </children>
-</GridPane>
+            </Button>
+              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Pay with check" translateX="10.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="72.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+              <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" translateY="13.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+              <TextField maxWidth="-Infinity" prefWidth="250.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+              <TextField maxWidth="-Infinity" prefWidth="75.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+              <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="99.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+              <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="32.0" prefWidth="104.0" text="Logout" textAlignment="CENTER" translateX="5.0" GridPane.columnIndex="9" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+              <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <font>
+                      <Font name="System Bold" size="36.0" />
+                  </font>
+            </Label>
+              <Button mnemonicParsing="false" onAction="#onMenuButtonPress" prefHeight="32.0" prefWidth="111.0" text="Go to menu" GridPane.columnIndex="8">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.5" text="Pay with credit:" translateY="-20.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+          </children>
+      </GridPane>
+   </children>
+</StackPane>
