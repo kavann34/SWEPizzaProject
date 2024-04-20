@@ -42,6 +42,9 @@ public class MenuPageController {
     public RadioButton mediumDrinkRadio;
     public RadioButton largeDrinkRadio;
     public ToggleGroup crustType;
+    public RadioButton thinCrustRadio;
+    public RadioButton regularCrustRadio;
+    public RadioButton deepDishRadio;
 
     public void goToMainPage(ActionEvent event) {
     }
@@ -74,10 +77,26 @@ public class MenuPageController {
     }
 
     public void onAddToOrderPress(ActionEvent event) {
-
+    regularCrustRadio.fire();
     }
 
     public void onLogoutButtonPress(ActionEvent event) {
 
+    }
+
+    public void onTenInchRadioSelect(ActionEvent event) {
+        regularCrustRadio.fire();
+    }
+
+    public void onTwelveInchRadioSelect(ActionEvent event) {
+        regularCrustRadio.fire();
+    }
+
+    public void onFourteenInchRadioSelect(ActionEvent event) {
+        regularCrustRadio.fire();
+    }
+
+    public void onSixteenInchRadioPress(ActionEvent event) {
+        regularCrustRadio.fire();
     }
 }

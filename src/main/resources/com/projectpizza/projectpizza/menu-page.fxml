@@ -114,12 +114,12 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <CheckBox fx:id="spriteCheckbox" alignment="CENTER" mnemonicParsing="false" text="Sprite" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-      <CheckBox fx:id="fantaCheckbox" mnemonicParsing="false" text="Fanta" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
-      <CheckBox fx:id="cokeCheckbox" mnemonicParsing="false" text="Coke" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-      <CheckBox fx:id="waterCheckbox" mnemonicParsing="false" text="Water" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-      <CheckBox fx:id="teaCheckbox" mnemonicParsing="false" text="Tea" GridPane.columnIndex="7" GridPane.rowIndex="10" />
-      <CheckBox fx:id="lemonadeCheckbox" mnemonicParsing="false" text="Lemonade" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+      <CheckBox fx:id="spriteCheckbox" alignment="CENTER" mnemonicParsing="false" text="Sprite" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
+      <CheckBox fx:id="fantaCheckbox" mnemonicParsing="false" text="Fanta" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+      <CheckBox fx:id="cokeCheckbox" mnemonicParsing="false" text="Coke" GridPane.columnIndex="6" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
+      <CheckBox fx:id="waterCheckbox" mnemonicParsing="false" text="Water" GridPane.columnIndex="6" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+      <CheckBox fx:id="teaCheckbox" mnemonicParsing="false" text="Tea" GridPane.columnIndex="7" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+      <CheckBox fx:id="lemonadeCheckbox" mnemonicParsing="false" text="Lemonade" GridPane.columnIndex="7" GridPane.rowIndex="8" GridPane.valignment="BOTTOM" />
       <Label ellipsisString="" prefHeight="19.0" prefWidth="39.0" text="12&quot;" translateX="10.0" translateY="1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -157,21 +157,21 @@
       <CheckBox fx:id="peppersCheckbox" mnemonicParsing="false" text="Peppers" translateX="-30.0" translateY="-25.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
       <CheckBox fx:id="onionsCheckbox" mnemonicParsing="false" text="Onions" translateY="10.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
       <CheckBox fx:id="olivesCheckbox" mnemonicParsing="false" text="Olvies" translateY="-25.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-      <RadioButton fx:id="tenInchSizeRadio" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+      <RadioButton fx:id="tenInchSizeRadio" mnemonicParsing="false" onAction="#onTenInchRadioSelect" translateY="-8.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
          <toggleGroup>
             <ToggleGroup fx:id="pizzaSize" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="twelveInchSizeRadio" mnemonicParsing="false" toggleGroup="$pizzaSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
-      <RadioButton fx:id="fourteenInchSizeRadio" mnemonicParsing="false" toggleGroup="$pizzaSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
-      <RadioButton fx:id="sixteenInchSizeRadio" mnemonicParsing="false" toggleGroup="$pizzaSize" translateY="-21.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+      <RadioButton fx:id="twelveInchSizeRadio" mnemonicParsing="false" onAction="#onTwelveInchRadioSelect" toggleGroup="$pizzaSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+      <RadioButton fx:id="fourteenInchSizeRadio" mnemonicParsing="false" onAction="#onFourteenInchRadioSelect" toggleGroup="$pizzaSize" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+      <RadioButton fx:id="sixteenInchSizeRadio" mnemonicParsing="false" onAction="#onSixteenInchRadioPress" toggleGroup="$pizzaSize" translateY="-21.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
       <RadioButton fx:id="smallDrinkRadio" mnemonicParsing="false" text="Small" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
          <toggleGroup>
             <ToggleGroup fx:id="drinkSize" />
          </toggleGroup>
       </RadioButton>
       <RadioButton fx:id="mediumDrinkRadio" mnemonicParsing="false" text="Medium" toggleGroup="$drinkSize" translateX="7.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-      <RadioButton fx:id="largeDrinkRadio" mnemonicParsing="false" text="Large" toggleGroup="$drinkSize" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="BASELINE" />
+      <RadioButton fx:id="largeDrinkRadio" mnemonicParsing="false" text="Large" toggleGroup="$drinkSize" translateY="6.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="BASELINE" />
       <Label prefHeight="19.0" prefWidth="29.0" text="\$2" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -182,18 +182,18 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label prefHeight="19.0" prefWidth="29.0" text="\$4" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+      <Label prefHeight="19.0" prefWidth="29.0" text="\$4" translateY="-3.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <RadioButton mnemonicParsing="false" text="Thin Crust" translateX="5.0" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+      <RadioButton fx:id="thinCrustRadio" mnemonicParsing="false" text="Thin Crust" translateX="5.0" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <toggleGroup>
             <ToggleGroup fx:id="crustType" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton mnemonicParsing="false" text="Regular Crust" toggleGroup="$crustType" translateX="5.0" GridPane.rowIndex="4" />
-      <RadioButton mnemonicParsing="false" text="Deep Dish" toggleGroup="$crustType" translateX="5.0" translateY="-20.0" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+      <RadioButton fx:id="regularCrustRadio" mnemonicParsing="false" text="Regular Crust" toggleGroup="$crustType" translateX="5.0" GridPane.rowIndex="4" />
+      <RadioButton fx:id="deepDishRadio" mnemonicParsing="false" text="Deep Dish" toggleGroup="$crustType" translateX="5.0" translateY="-20.0" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Drink size:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
          <font>
             <Font size="14.0" />
@@ -204,7 +204,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza size:" translateX="5.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza size:" translateX="5.0" translateY="-2.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <font>
             <Font size="15.0" />
          </font>
