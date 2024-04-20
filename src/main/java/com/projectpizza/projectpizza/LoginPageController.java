@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -22,6 +23,8 @@ public class LoginPageController {
     public TextField phoneInput;
     @FXML
     public PasswordField passwordInput;
+    @FXML
+    public TextArea errorText;
 
     private static final File accountDatabase = new File("accountDatabase.txt");
 
@@ -53,27 +56,11 @@ public class LoginPageController {
     }
 
     public void logIn(ActionEvent event) {
-        try(Scanner sc = new Scanner(accountDatabase)) {
-            String line;
-            String[] split;
-            while(sc.hasNextLine()) {
-                line = sc.nextLine();
-                split = line.split(",");
-                if((phoneInput.getText().toString().equals(split[0])) && (passwordInput.getText().toString().equals(split[1]))) {
-                    try{
-                        Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
-                        Scene textEditorScene = new Scene(textEditorSceneRoot);
-
-                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                        stage.setScene(textEditorScene);
-                        stage.show();
-                    }catch(IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            }
-        } catch (FileNotFoundException e) {
+        String logInResult = AccountHandler.login(phoneInput.getText().toString(), passwordInput.getText().toString());
+        if(logInResult.equals("Success")) {
+            goToMenu(event);
+        } else {
+            errorText.setText(logInResult);
         }
 
     }
