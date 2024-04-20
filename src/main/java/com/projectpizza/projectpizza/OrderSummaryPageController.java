@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class OrderSummaryPageController {
-    public void goToLoginPage(ActionEvent event) {
+    public void goToLoginPage(ActionEvent event) {//this code can be re-purposed for the logout button code
         try{
             Parent textEditorSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
             Scene textEditorScene = new Scene(textEditorSceneRoot);

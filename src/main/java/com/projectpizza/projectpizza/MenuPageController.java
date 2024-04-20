@@ -71,4 +71,7 @@ public class MenuPageController {
             e.printStackTrace();
         }
     }
+
+    public void onAddToOrderPress(ActionEvent event) {
+    }
 }

@@ -20,7 +20,7 @@
         <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="24.0" prefWidth="68.0" text="Home " GridPane.columnIndex="1" />
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToMenu" prefHeight="24.0" prefWidth="68.0" text="Home " GridPane.columnIndex="1" />
         <Button mnemonicParsing="false" onAction="#goToNewAccountPage" text="Creat Account" GridPane.columnIndex="4" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in to your P.P account " textAlignment="CENTER" wrappingWidth="227.07227969169617" GridPane.columnIndex="2" GridPane.rowIndex="1">
             <font>

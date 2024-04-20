@@ -40,7 +40,7 @@
         <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" GridPane.columnIndex="3" GridPane.rowIndex="5" />
         <Button mnemonicParsing="false" text="Submit Order" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa91f" height="69.0" stroke="BLACK" strokeType="INSIDE" width="601.0" />
-        <Button mnemonicParsing="false" onAction="#goToMainPage" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+        <Button mnemonicParsing="false" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
         <Button mnemonicParsing="false" onAction="#goToMenuPage" prefHeight="25.0" prefWidth="50.0" text="Menu" GridPane.columnIndex="3" />
     </children>
 </GridPane>
