@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -42,14 +43,24 @@ public class OrderSummaryPageController {
 
     //Pushes array to order summary in list view
     @FXML
-    private ListView<String> myListView;
+    private TextArea textArea;
 
     String[] test = {"one", "two", "three", "two", "three", "two", "three"}; //Will be changed to read order's values once menu is complete
 
     @FXML
     public void initialize() {
-        myListView.setFocusTraversable(false);
-        myListView.getItems().addAll(test);
+        StringBuilder sb = new StringBuilder();
+        for(String item: test) {
+            sb.append(item + ", ");
+        }
+        sb.delete(sb.length()-2, sb.length());
+        String s = sb.toString();
+        textArea.appendText(s);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
     }
 
+    public void orderSubmitFinal(ActionEvent actionEvent) {
+
+    }
 }
