@@ -3,6 +3,8 @@ package com.projectpizza.projectpizza;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -45,6 +47,8 @@ public class MenuPageController {
     public RadioButton thinCrustRadio;
     public RadioButton regularCrustRadio;
     public RadioButton deepDishRadio;
+
+    public static ArrayList<String> order = new ArrayList<>();
 
     private void initialize() {
         pizzaSize = new ToggleGroup();
@@ -133,7 +137,7 @@ public class MenuPageController {
                 toppings = toppings.substring(0, toppings.length() - 2);
             }
 
-            writePizzaToFile(size, toppings);
+            setOrderItems(size, toppings);
             resetSelections();
         }
     }
@@ -145,6 +149,16 @@ public class MenuPageController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void setOrderItems(String size, String toppings) {
+        order.add(size);
+        String[] split;
+        split = toppings.split(", ");
+        for(String item:split) {
+            order.add(item);
+        }
+        order.add("\n");
     }
 
     public void resetSelections() {
