@@ -52,36 +52,36 @@
                       <Font name="System Bold" size="33.0" />
                   </font>
               </Text>
-              <PasswordField fx:id="passwordInput" prefHeight="26.0" prefWidth="175.0" promptText="Password" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-              <PasswordField fx:id="passwordConfirmationInput" layoutX="210.0" layoutY="161.0" prefHeight="26.0" prefWidth="175.0" promptText="Re-Enter Password" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-              <TextField fx:id="phoneInput" prefHeight="26.0" prefWidth="175.0" promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+              <TextField fx:id="phoneInput" onAction="#onPhoneReturnPress" prefHeight="26.0" prefWidth="175.0" promptText="Phone Number" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+              <TextField fx:id="firstNameInput" layoutX="236.0" layoutY="114.0" onAction="#onFirstNameReturnPress" prefHeight="26.0" prefWidth="120.0" promptText="First Name" translateX="-20.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+                  <GridPane.margin>
+                      <Insets left="50.0" />
+                  </GridPane.margin>
+              </TextField>
+              <TextField fx:id="lastNameInput" layoutX="210.0" layoutY="147.0" onAction="#onLastNameReturnPress" prefHeight="26.0" prefWidth="120.0" promptText="Last Name" translateX="20.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                  <GridPane.margin>
+                      <Insets right="50.0" />
+                  </GridPane.margin>
+              </TextField>
+              <PasswordField fx:id="passwordInput" onAction="#onPasswordReturnPress" prefHeight="26.0" prefWidth="175.0" promptText="Password" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+              <PasswordField fx:id="passwordConfirmationInput" layoutX="210.0" layoutY="161.0" onAction="#onPasswordConfirmationReturnPress" prefHeight="26.0" prefWidth="175.0" promptText="Re-Enter Password" GridPane.columnIndex="2" GridPane.rowIndex="7" />
               <Text layoutX="210.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
                   <font>
                       <Font name="System Bold" size="27.0" />
                   </font>
               </Text>
-              <TextField fx:id="addressStreetInput" layoutX="210.0" layoutY="88.0" prefHeight="26.0" prefWidth="275.0" promptText="Street Address" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-              <TextField fx:id="firstNameInput" layoutX="236.0" layoutY="114.0" prefHeight="26.0" prefWidth="120.0" promptText="First Name" translateX="-20.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5">
-                  <GridPane.margin>
-                      <Insets left="50.0" />
-                  </GridPane.margin>
-              </TextField>
-              <TextField fx:id="lastNameInput" layoutX="210.0" layoutY="147.0" prefHeight="26.0" prefWidth="120.0" promptText="Last Name" translateX="20.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
-                  <GridPane.margin>
-                      <Insets right="50.0" />
-                  </GridPane.margin>
-              </TextField>
-              <TextField fx:id="addressCityInput" layoutX="180.0" layoutY="147.0" prefHeight="26.0" prefWidth="120.0" promptText="City" translateX="-15.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10">
+              <TextField fx:id="addressStreetInput" layoutX="210.0" layoutY="88.0" onAction="#onStreetReturnPress" prefHeight="26.0" prefWidth="275.0" promptText="Street Address" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+              <TextField fx:id="addressCityInput" layoutX="180.0" layoutY="147.0" onAction="#onCityReturnPress" prefHeight="26.0" prefWidth="120.0" promptText="City" translateX="-15.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="10">
                   <GridPane.margin>
                       <Insets left="45.0" />
                   </GridPane.margin>
             </TextField>
-              <TextField fx:id="addressStateInput" layoutX="250.0" layoutY="314.0" prefHeight="26.0" prefWidth="120.0" promptText="State" translateX="15.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+              <TextField fx:id="addressStateInput" layoutX="250.0" layoutY="314.0" onAction="#onStateReturnPress" prefHeight="26.0" prefWidth="120.0" promptText="State" translateX="15.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
                   <GridPane.margin>
                       <Insets right="45.0" />
                   </GridPane.margin>
             </TextField>
-              <TextField fx:id="addressZipInput" layoutX="250.0" layoutY="314.0" prefHeight="26.0" prefWidth="120.0" promptText="Zip Code" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+              <TextField fx:id="addressZipInput" layoutX="250.0" layoutY="314.0" onAction="#onZipReturnPress" prefHeight="26.0" prefWidth="120.0" promptText="Zip Code" GridPane.columnIndex="2" GridPane.rowIndex="11" />
               <Button layoutX="286.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSubmitButtonPress" text="Submit" GridPane.columnIndex="2" GridPane.rowIndex="12" GridPane.valignment="TOP">
                   <font>
                       <Font name="System Bold" size="17.0" />

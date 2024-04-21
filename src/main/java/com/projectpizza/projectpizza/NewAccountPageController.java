@@ -76,4 +76,31 @@ public class NewAccountPageController {
             e.printStackTrace();
         }
     }
+
+    public void onPhoneReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onFirstNameReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onLastNameReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onPasswordConfirmationReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onPasswordReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onStreetReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onCityReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onStateReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
+
+    public void onZipReturnPress(ActionEvent event) {onSubmitButtonPress(event);
+    }
 }
