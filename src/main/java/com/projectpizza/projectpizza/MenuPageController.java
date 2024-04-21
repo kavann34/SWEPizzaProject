@@ -78,6 +78,10 @@ public class MenuPageController {
     }
 
     public void onPizzaAddToOrderPress(ActionEvent event) {
+        if(tenInchSizeRadio.isPressed() || twelveInchSizeRadio.isPressed() || fourteenInchSizeRadio.isPressed() || sixteenInchSizeRadio.isPressed()) {
+            Order newOrder = new Order(Session.getPhoneNumber());
+
+        }
         String size = "";
         if (tenInchSizeRadio.isSelected()) {
             size = "10 inch";

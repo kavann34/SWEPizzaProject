@@ -42,7 +42,7 @@ public class NewAccountPageController {
             passwordErrorText.setText("Passwords do not match or are invalid.");
             return;
         }
-        AccountHandler.addAccountToDatabase(phoneInput.getText(),
+        AccountHandler.addAccountToDatabase(phoneInput.getText().replaceAll("\\D+",""),
                                                 passwordInput.getText(),
                                                 firstNameInput.getText(),
                                                 lastNameInput.getText(),
@@ -50,14 +50,14 @@ public class NewAccountPageController {
                                                 addressCityInput.getText(),
                                                 addressStateInput.getText(),
                                                 addressZipInput.getText());
-        Session.setPhoneNumber(phoneInput.getText());
+        Session.setPhoneNumber(phoneInput.getText().replaceAll("\\D+",""));
 
         try{
-            Parent menuPageSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
-            Scene menupageScene = new Scene(menuPageSceneRoot, 800, 600);
+            Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
+            Scene loginPageScene = new Scene(loginPageSceneRoot);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(menupageScene);
+            stage.setScene(loginPageScene);
             stage.show();
         }catch(IOException e) {
             e.printStackTrace();
