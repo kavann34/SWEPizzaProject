@@ -9,6 +9,13 @@ public class MenuItem {
     protected String size;
     protected String type;
 
+    public MenuItem(String name, int price, String size, String type) {
+        this.name = name;
+        this.price = price;
+        this.size = size;
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         StringBuilder item = new StringBuilder();

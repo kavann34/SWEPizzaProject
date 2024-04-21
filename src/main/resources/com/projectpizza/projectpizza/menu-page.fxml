@@ -45,13 +45,13 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#727577a1" height="244.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" width="797.0" GridPane.rowIndex="4" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#727577a1" height="176.0" stroke="BLACK" strokeType="INSIDE" translateX="1.0" width="797.0" GridPane.rowIndex="9" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="72.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="47.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="1.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="56.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="3.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="70.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="47.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="1.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="56.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="3.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99999980" height="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="120.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
               <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="33.0" prefWidth="105.0" text="Logout" GridPane.columnIndex="7" GridPane.halignment="LEFT">
                   <GridPane.margin>
                       <Insets left="10.0" />
@@ -68,7 +68,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-              <Button fx:id="drinkAddButton" layoutX="286.0" layoutY="14.0" maxHeight="42.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onDrinkAddToOrderPress" prefHeight="42.0" prefWidth="122.0" text="Add to Order" GridPane.columnIndex="7" GridPane.rowIndex="11">
+              <Button fx:id="drinkAddButton" layoutX="286.0" layoutY="14.0" maxHeight="42.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onDrinkAddToOrderPress" prefHeight="42.0" prefWidth="122.0" text="Add to Order" translateX="-2.0" translateY="4.0" GridPane.columnIndex="7" GridPane.rowIndex="11">
                   <font>
                       <Font name="System Bold" size="14.0" />
                   </font>
@@ -151,36 +151,6 @@
                   <Font name="System Bold" size="29.0" />
                </font>
             </Label>
-            <CheckBox fx:id="spriteCheckbox" alignment="CENTER" mnemonicParsing="false" text="Sprite" translateX="-13.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="fantaCheckbox" mnemonicParsing="false" text="Fanta" translateX="-16.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="TOP">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="cokeCheckbox" mnemonicParsing="false" text="Coke" translateX="-12.0" GridPane.columnIndex="6" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="waterCheckbox" mnemonicParsing="false" text="Water" translateX="-7.0" GridPane.columnIndex="6" GridPane.rowIndex="10" GridPane.valignment="TOP">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="teaCheckbox" mnemonicParsing="false" text="Tea" GridPane.columnIndex="7" GridPane.rowIndex="10" GridPane.valignment="TOP">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="lemonadeCheckbox" mnemonicParsing="false" text="Lemonade" GridPane.columnIndex="7" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </CheckBox>
             <Label ellipsisString="" prefHeight="19.0" prefWidth="39.0" text="12&quot;" translateX="10.0" translateY="1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold" size="13.0" />
@@ -325,17 +295,50 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <Button fx:id="pizzaAddButton" maxHeight="33.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onPizzaAddToOrderPress" prefHeight="42.0" prefWidth="120.0" text="Add to Order" translateY="-6.0" GridPane.columnIndex="7" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+            <Button maxHeight="33.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onPizzaAddToOrderPress" prefHeight="42.0" prefWidth="120.0" text="Add to Order" translateX="-1.0" translateY="-4.0" GridPane.columnIndex="7" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Circle fill="#8e8f8f" radius="32.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="P.P." translateX="1.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Circle fill="#8e8f8f" radius="32.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="P.P." translateX="6.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="Cooper Black" size="30.0" />
                </font>
             </Text>
+            <RadioButton fx:id="spriteRadio" mnemonicParsing="false" text="Sprite" translateX="15.0" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="drinkSelection" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="fantaRadio" mnemonicParsing="false" text="Fanta" toggleGroup="$drinkSelection" translateX="14.0" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="cokeRadio" mnemonicParsing="false" text="Coke" toggleGroup="$drinkSelection" translateX="-2.0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="waterRadio" mnemonicParsing="false" text="Water" toggleGroup="$drinkSelection" GridPane.columnIndex="6" GridPane.rowIndex="10">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="lemonadeRadio" mnemonicParsing="false" text="Lemonade" toggleGroup="$drinkSelection" GridPane.columnIndex="7" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="teaRadio" mnemonicParsing="false" text="Tea" toggleGroup="$drinkSelection" translateY="-3.0" GridPane.columnIndex="7" GridPane.rowIndex="10">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
           </children>
          <opaqueInsets>
             <Insets right="5.0" />
