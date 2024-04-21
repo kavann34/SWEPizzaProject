@@ -16,7 +16,7 @@ public class OrderHandler {
     public static boolean writeOrderToDatabase(Order order){
         if (orderDatabase != null) {
             try (FileWriter writer = new FileWriter(orderDatabase, true)) {
-                writer.append("" + order);
+                writer.append(Session.getPhoneNumber() + ": " + order);
                 return true;
             } catch (IOException e) {
                 e.printStackTrace();

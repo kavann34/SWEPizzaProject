@@ -20,9 +20,9 @@ public class MenuItem {
     public String toString() {
         StringBuilder item = new StringBuilder();
         if(getName().equals("Pizza")) {
-            item.append(getSize() + " - " + getType() + " - " + getName() + "\t" + getPrice() + "\n");
+            item.append(getSize() + " - " + getType() + " - " + getName() + "\t" + "$" + getPrice() + "\n");
             for (Topping topping : toppings) {
-                item.append("\t+" + topping + "\n");
+                item.append("\t+" + topping.getName() + "\n");
             }
         }
         else {

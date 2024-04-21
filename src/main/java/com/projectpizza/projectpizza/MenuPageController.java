@@ -73,7 +73,7 @@ public class MenuPageController {
     }
 
     public void onPizzaAddToOrderPress(ActionEvent event) {
-        if (tenInchSizeRadio.isPressed() || twelveInchSizeRadio.isPressed() || fourteenInchSizeRadio.isPressed() || sixteenInchSizeRadio.isPressed()) {
+        if (tenInchSizeRadio.isSelected() || twelveInchSizeRadio.isSelected() || fourteenInchSizeRadio.isSelected() || sixteenInchSizeRadio.isSelected()) {
             Toggle size = pizzaSize.getSelectedToggle();
             Toggle crust = crustType.getSelectedToggle();
             MenuItem newPizza = new MenuItem("Pizza", Integer.parseInt(size.getUserData().toString()), size.getUserData() + "\"", ((RadioButton) crust).getText());

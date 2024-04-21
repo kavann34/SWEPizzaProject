@@ -70,7 +70,8 @@ public class OrderSummaryPageController {
         }
         sb.delete(sb.length()-2, sb.length());
         String s = sb.toString();
-        orderTextArea.appendText(s);
+        MenuPageController.newOrder.updateTotal();
+        orderTextArea.appendText(MenuPageController.newOrder.toString());
         orderTextArea.setEditable(false);
         orderTextArea.setWrapText(true);
     }

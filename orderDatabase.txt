@@ -1,1 +1,7 @@
 Small - Coke - Drink
+Small - Fanta - Drink
+7701234567: 12" - Deep Dish - Pizza	$12
+	+Extra Cheese
+	+Pepperoni
+	+Peppers
+	+Mushroom
