@@ -9,12 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class OrderSummaryPageController {
-    private static final File orderDatabase = new File("orderDatabase.txt");
     public void onLogoutButtonPress(ActionEvent event) {
         Session.setPhoneNumber("");
         try{
@@ -48,32 +45,19 @@ public class OrderSummaryPageController {
     @FXML
     private TextArea orderTextArea;
 
+    String[] test = {"one", "two", "three", "two", "three", "two", "three"}; //Will be changed to read order's values once menu is complete
+
     @FXML
     public void initialize() {
         StringBuilder sb = new StringBuilder();
-        for(String item: MenuPageController.order) {
+        for(String item: test) {
             sb.append(item + ", ");
         }
-        sb.delete(sb.length() - 2, sb.length());
+        sb.delete(sb.length()-2, sb.length());
         String s = sb.toString();
         orderTextArea.appendText(s);
         orderTextArea.setEditable(false);
         orderTextArea.setWrapText(true);
     }
 
-    public void onSubmitOrderPress(ActionEvent actionEvent) {
-        String finalOrder = Session.getPhoneNumber() + ", ";
-        StringBuilder sb = new StringBuilder();
-        for(String item: MenuPageController.order) {
-            sb.append(item + ", ");
-        }
-        sb.delete(sb.length() - 2, sb.length());
-        finalOrder += sb.toString();
-
-        try (FileWriter writer = new FileWriter(orderDatabase)) {
-            writer.write(finalOrder);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
