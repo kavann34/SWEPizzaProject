@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
@@ -46,22 +47,11 @@ public class MenuPageController {
     public RadioButton regularCrustRadio;
     public RadioButton deepDishRadio;
 
-    private void initialize() {
-        pizzaSize = new ToggleGroup();
-        tenInchSizeRadio.setToggleGroup(pizzaSize);
-        twelveInchSizeRadio.setToggleGroup(pizzaSize);
-        fourteenInchSizeRadio.setToggleGroup(pizzaSize);
-        sixteenInchSizeRadio.setToggleGroup(pizzaSize);
-
-        crustType = new ToggleGroup();
-        regularCrustRadio.setToggleGroup(crustType);
-        deepDishRadio.setToggleGroup(crustType);
-        thinCrustRadio.setToggleGroup(crustType);
-
-        drinkSize = new ToggleGroup();
-        smallDrinkRadio.setToggleGroup(drinkSize);
-        mediumDrinkRadio.setToggleGroup(drinkSize);
-        largeDrinkRadio.setToggleGroup(drinkSize);
+    public void initialize() {
+        tenInchSizeRadio.setUserData("10\"");
+        twelveInchSizeRadio.setUserData("12\"");
+        fourteenInchSizeRadio.setUserData("14\"");
+        sixteenInchSizeRadio.setUserData("16\"");
     }
 
     public void goToOrderSummaryPage(ActionEvent event) {
@@ -77,11 +67,12 @@ public class MenuPageController {
         }
     }
 
-    public void onPizzaAddToOrderPress(ActionEvent event) {
-        if(tenInchSizeRadio.isPressed() || twelveInchSizeRadio.isPressed() || fourteenInchSizeRadio.isPressed() || sixteenInchSizeRadio.isPressed()) {
-            Order newOrder = new Order(Session.getPhoneNumber());
-
-        }
+    public void onPizzaAddToOrderPress(ActionEvent event) { //WIP
+        //if(tenInchSizeRadio.isPressed() || twelveInchSizeRadio.isPressed() || fourteenInchSizeRadio.isPressed() || sixteenInchSizeRadio.isPressed()) {
+        //    Order newOrder = new Order(Session.getPhoneNumber());
+        //    Toggle size = pizzaSize.getSelectedToggle();
+        //    MenuItem newPizza = new MenuItem("Pizza", size.getUserData(),
+        //}
         String size = "";
         if (tenInchSizeRadio.isSelected()) {
             size = "10 inch";

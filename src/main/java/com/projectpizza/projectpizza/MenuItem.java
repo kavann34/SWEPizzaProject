@@ -6,6 +6,14 @@ public class MenuItem {
     protected ArrayList<Topping> toppings = new ArrayList<>();
     protected String name;
     protected int price;
+
+    public MenuItem(String name, int price, String size, String type) {
+        this.name = name;
+        this.price = price;
+        this.size = size;
+        this.type = type;
+    }
+
     protected String size;
     protected String type;
 
