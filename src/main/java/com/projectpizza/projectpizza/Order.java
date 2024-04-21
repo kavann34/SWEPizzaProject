@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Order {
     private int total;
+    private String phone;
     public ArrayList<MenuItem> orderItems = new ArrayList<>();
 
     public String getTotal() {
@@ -27,7 +28,8 @@ public class Order {
         return orderDetails.toString();
     }
 
-    public Order() {
+    public Order(String phone) {
+        this.phone = phone;
     }
 
 }
