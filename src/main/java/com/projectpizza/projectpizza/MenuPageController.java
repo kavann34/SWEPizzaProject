@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
@@ -46,24 +47,6 @@ public class MenuPageController {
     public RadioButton regularCrustRadio;
     public RadioButton deepDishRadio;
 
-    public static ArrayList<String> order = new ArrayList<>();
-
-    private void initialize() {
-        pizzaSize = new ToggleGroup();
-        tenInchSizeRadio.setToggleGroup(pizzaSize);
-        twelveInchSizeRadio.setToggleGroup(pizzaSize);
-        fourteenInchSizeRadio.setToggleGroup(pizzaSize);
-        sixteenInchSizeRadio.setToggleGroup(pizzaSize);
-
-        crustType = new ToggleGroup();
-        regularCrustRadio.setToggleGroup(crustType);
-        deepDishRadio.setToggleGroup(crustType);
-        thinCrustRadio.setToggleGroup(crustType);
-
-        drinkSize = new ToggleGroup();
-        smallDrinkRadio.setToggleGroup(drinkSize);
-        mediumDrinkRadio.setToggleGroup(drinkSize);
-        largeDrinkRadio.setToggleGroup(drinkSize);
     public void initialize() {
         tenInchSizeRadio.setUserData("10\"");
         twelveInchSizeRadio.setUserData("12\"");
@@ -145,7 +128,7 @@ public class MenuPageController {
                 toppings = toppings.substring(0, toppings.length() - 2);
             }
 
-            setOrderItems(size, toppings);
+            writePizzaToFile(size, toppings);
             resetSelections();
         }
     }
@@ -157,16 +140,6 @@ public class MenuPageController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void setOrderItems(String size, String toppings) {
-        order.add(size);
-        String[] split;
-        split = toppings.split(", ");
-        for(String item:split) {
-            order.add(item);
-        }
-        order.add("\n");
     }
 
     public void resetSelections() {
