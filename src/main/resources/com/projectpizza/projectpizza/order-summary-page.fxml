@@ -18,15 +18,15 @@
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
           <columnConstraints>
               <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="9.0" prefWidth="9.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="344.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="320.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="0.0" prefWidth="0.0" />
-              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="132.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="138.0" />
               <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
-              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="8.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="55.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="17.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="110.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="125.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="96.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="109.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="122.0" />
           </columnConstraints>
           <rowConstraints>
             <RowConstraints maxHeight="73.8" minHeight="10.0" prefHeight="73.8" vgrow="SOMETIMES" />
@@ -66,25 +66,28 @@
             </Button>
               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="72.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
               <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" translateY="13.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP" />
-              <TextField maxWidth="-Infinity" prefWidth="250.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-              <TextField maxWidth="-Infinity" prefWidth="75.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+              <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+              <TextField maxWidth="-Infinity" prefWidth="70.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
               <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="99.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="104.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-              <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="32.0" prefWidth="104.0" text="Logout" textAlignment="CENTER" translateX="5.0" GridPane.columnIndex="9" GridPane.halignment="CENTER">
+              <Button mnemonicParsing="false" onAction="#onLogoutButtonPress" prefHeight="32.0" prefWidth="100.0" text="Logout" textAlignment="CENTER" translateX="5.0" GridPane.columnIndex="9" GridPane.halignment="LEFT">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="1.0" />
+               </GridPane.margin>
             </Button>
               <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                   <font>
                       <Font name="System Bold" size="36.0" />
                   </font>
             </Label>
-              <Button mnemonicParsing="false" onAction="#onMenuButtonPress" prefHeight="32.0" prefWidth="111.0" text="Go to menu" GridPane.columnIndex="8">
+              <Button mnemonicParsing="false" onAction="#onMenuButtonPress" prefHeight="32.0" prefWidth="105.0" text="Go to menu" GridPane.columnIndex="8">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

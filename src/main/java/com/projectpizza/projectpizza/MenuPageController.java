@@ -1,5 +1,8 @@
 package com.projectpizza.projectpizza;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,8 +12,6 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class MenuPageController {
     public CheckBox extraCheeseCheckbox;
@@ -44,33 +45,136 @@ public class MenuPageController {
     public RadioButton thinCrustRadio;
     public RadioButton regularCrustRadio;
     public RadioButton deepDishRadio;
+
+    private void initialize() {
+        pizzaSize = new ToggleGroup();
+        tenInchSizeRadio.setToggleGroup(pizzaSize);
+        twelveInchSizeRadio.setToggleGroup(pizzaSize);
+        fourteenInchSizeRadio.setToggleGroup(pizzaSize);
+        sixteenInchSizeRadio.setToggleGroup(pizzaSize);
+
+        crustType = new ToggleGroup();
+        regularCrustRadio.setToggleGroup(crustType);
+        deepDishRadio.setToggleGroup(crustType);
+        thinCrustRadio.setToggleGroup(crustType);
+
+        drinkSize = new ToggleGroup();
+        smallDrinkRadio.setToggleGroup(drinkSize);
+        mediumDrinkRadio.setToggleGroup(drinkSize);
+        largeDrinkRadio.setToggleGroup(drinkSize);
+    }
+
     public void goToOrderSummaryPage(ActionEvent event) {
-        try{
+        try {
             Parent orderSummarySceneRoot = FXMLLoader.load(getClass().getResource("order-summary-page.fxml"));
             Scene orderSummaryScene = new Scene(orderSummarySceneRoot);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(orderSummaryScene);
             stage.show();
-        }catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void onPizzaAddToOrderPress(ActionEvent event) {
+        String size = "";
+        if (tenInchSizeRadio.isSelected()) {
+            size = "10 inch";
+        } else if (twelveInchSizeRadio.isSelected()) {
+            size = "12 inch";
+        } else if (fourteenInchSizeRadio.isSelected()) {
+            size = "14 inch";
+        } else if (sixteenInchSizeRadio.isSelected()) {
+            size = "16 inch";
+        }
 
+        String toppings = "";
+        if (extraCheeseCheckbox.isSelected()) {
+            toppings += "Extra Cheese, ";
+        }
+        if (pepperoniCheckbox.isSelected()) {
+            toppings += "Pepperoni, ";
+        }
+        if (sausageCheckbox.isSelected()) {
+            toppings += "Sausage, ";
+        }
+        if (peppersCheckbox.isSelected()) {
+            toppings += "Peppers, ";
+        }
+        if (mushroomsCheckbox.isSelected()) {
+            toppings += "Mushrooms, ";
+        }
+        if (baconCheckbox.isSelected()) {
+            toppings += "Bacon, ";
+        }
+        if (pineappleCheckbox.isSelected()) {
+            toppings += "Pineapple, ";
+        }
+        if (spinachCheckbox.isSelected()) {
+            toppings += "Spinach, ";
+        }
+        if (extraSauceCheckbox.isSelected()) {
+            toppings += "Extra Sauce, ";
+        }
+        if (extraCheeseCheckbox.isSelected()) {
+            toppings += "Extra Cheese, ";
+            if (onionsCheckbox.isSelected()) {
+                toppings += "Onions, ";
+            }
+            if (tomatoCheckbox.isSelected()) {
+                toppings += "Tomatoes, ";
+            }
+            if (olivesCheckbox.isSelected()) {
+                toppings += "Olives, ";
+            }
+
+            if (!toppings.isEmpty()) {
+                toppings = toppings.substring(0, toppings.length() - 2);
+            }
+
+            writePizzaToFile(size, toppings);
+            resetSelections();
+        }
+    }
+
+    public void writePizzaToFile(String size, String toppings) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("orderDatabase.txt", true))) {
+            writer.write("Size: " + size + ", Toppings: " + toppings);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void resetSelections() {
+        pizzaSize.selectToggle(null);
+        crustType.selectToggle(null);
+        drinkSize.selectToggle(null);
+        extraCheeseCheckbox.setSelected(false);
+        pepperoniCheckbox.setSelected(false);
+        sausageCheckbox.setSelected(false);
+        mushroomsCheckbox.setSelected(false);
+        baconCheckbox.setSelected(false);
+        peppersCheckbox.setSelected(false);
+        pineappleCheckbox.setSelected(false);
+        spinachCheckbox.setSelected(false);
+        extraSauceCheckbox.setSelected(false);
+        onionsCheckbox.setSelected(false);
+        tomatoCheckbox.setSelected(false);
+        olivesCheckbox.setSelected(false);
     }
 
     public void onLogoutButtonPress(ActionEvent event) {
         Session.setPhoneNumber("");
-        try{
+        try {
             Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
             Scene loginPageScene = new Scene(loginPageSceneRoot);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(loginPageScene);
             stage.show();
-        }catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -92,5 +196,62 @@ public class MenuPageController {
     }
 
     public void onDrinkAddToOrderPress(ActionEvent event) {
+        StringBuilder drinkOrder = new StringBuilder();
+
+        if (smallDrinkRadio.isSelected()) {
+            drinkOrder.append("Small ");
+        } else if (mediumDrinkRadio.isSelected()) {
+            drinkOrder.append("Medium ");
+        } else if (largeDrinkRadio.isSelected()) {
+            drinkOrder.append("Large ");
+        }
+
+        if (spriteCheckbox.isSelected()) {
+            drinkOrder.append("Sprite, ");
+        }
+        if (fantaCheckbox.isSelected()) {
+            drinkOrder.append("Fanta, ");
+        }
+        if (cokeCheckbox.isSelected()) {
+            drinkOrder.append("Coke, ");
+        }
+        if (waterCheckbox.isSelected()) {
+            drinkOrder.append("Water, ");
+        }
+        if (teaCheckbox.isSelected()) {
+            drinkOrder.append("Tea, ");
+        }
+        if (lemonadeCheckbox.isSelected()) {
+            drinkOrder.append("Lemonade, ");
+        }
+
+        if (drinkOrder.length() > 0) {
+            drinkOrder.setLength(drinkOrder.length() - 2);
+        }
+
+        writeDrinkToFile(drinkOrder.toString());
+        resetDrinkSelections();
+    }
+
+    public void resetDrinkSelections() {
+        smallDrinkRadio.setSelected(false);
+        mediumDrinkRadio.setSelected(false);
+        largeDrinkRadio.setSelected(false);
+
+        spriteCheckbox.setSelected(false);
+        fantaCheckbox.setSelected(false);
+        cokeCheckbox.setSelected(false);
+        waterCheckbox.setSelected(false);
+        teaCheckbox.setSelected(false);
+        lemonadeCheckbox.setSelected(false);
+    }
+
+    public void writeDrinkToFile(String drinkOrder) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("orderDatabase.txt", true))) {
+            writer.write("Drink: " + drinkOrder);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

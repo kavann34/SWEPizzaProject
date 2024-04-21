@@ -68,7 +68,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-              <Button layoutX="286.0" layoutY="14.0" maxHeight="42.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onDrinkAddToOrderPress" prefHeight="42.0" prefWidth="122.0" text="Add to Order" GridPane.columnIndex="7" GridPane.rowIndex="11">
+              <Button fx:id="drinkAddButton" layoutX="286.0" layoutY="14.0" maxHeight="42.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onDrinkAddToOrderPress" prefHeight="42.0" prefWidth="122.0" text="Add to Order" GridPane.columnIndex="7" GridPane.rowIndex="11">
                   <font>
                       <Font name="System Bold" size="14.0" />
                   </font>
@@ -325,7 +325,7 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <Button maxHeight="33.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onPizzaAddToOrderPress" prefHeight="42.0" prefWidth="120.0" text="Add to Order" translateY="-6.0" GridPane.columnIndex="7" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+            <Button fx:id="pizzaAddButton" maxHeight="33.0" maxWidth="117.0" mnemonicParsing="false" onAction="#onPizzaAddToOrderPress" prefHeight="42.0" prefWidth="120.0" text="Add to Order" translateY="-6.0" GridPane.columnIndex="7" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
