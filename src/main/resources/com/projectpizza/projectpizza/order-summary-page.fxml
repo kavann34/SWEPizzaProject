@@ -65,10 +65,10 @@
                </font>
             </Button>
               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="72.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
-              <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" translateY="13.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP" />
-              <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-              <TextField maxWidth="-Infinity" prefWidth="70.0" promptText="Date" translateY="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" GridPane.valignment="TOP" />
-              <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="10.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+              <TextField maxWidth="-Infinity" prefWidth="200.0" promptText="Name On Card" translateY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+              <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="Card Number" translateY="-10.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+              <TextField maxWidth="-Infinity" prefWidth="70.0" promptText="Date" translateY="13.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+              <TextField maxWidth="-Infinity" prefWidth="40.0" promptText="CVV" translateY="18.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
               <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="46.0" prefWidth="104.0" text="Submit Order" textOverrun="CLIP" translateX="-10.0" GridPane.columnIndex="9" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold" size="13.0" />
@@ -82,7 +82,7 @@
                   <Insets left="1.0" />
                </GridPane.margin>
             </Button>
-              <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+              <Label prefHeight="55.0" prefWidth="286.0" text="Order Summary" translateX="115.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                   <font>
                       <Font name="System Bold" size="36.0" />
                   </font>
@@ -92,9 +92,15 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Text stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.5" text="Pay with credit:" translateY="-20.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Text stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.5" text="Pay with credit:" translateY="-20.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Circle fill="#8e8f8f" radius="32.0" stroke="BLACK" strokeType="INSIDE" translateX="39.0" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="P.P." translateX="42.0" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Cooper Black" size="30.0" />
                </font>
             </Text>
           </children>

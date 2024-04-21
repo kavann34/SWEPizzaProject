@@ -39,7 +39,7 @@
           </rowConstraints>
           <children>
               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6b00" height="72.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="800.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-              <Button mnemonicParsing="false" onAction="#onBackButtonPress" prefHeight="6.0" prefWidth="78.0" text="Back" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+              <Button mnemonicParsing="false" onAction="#onBackButtonPress" prefHeight="6.0" prefWidth="78.0" text="Back" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                   <GridPane.margin>
                       <Insets bottom="2.0" left="10.0" />
                   </GridPane.margin>
@@ -98,6 +98,12 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your information:" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+            <Circle fill="#8e8f8f" radius="32.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="P.P." translateX="1.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Cooper Black" size="30.0" />
                </font>
             </Text>
           </children>
