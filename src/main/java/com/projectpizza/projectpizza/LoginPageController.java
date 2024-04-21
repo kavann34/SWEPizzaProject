@@ -21,7 +21,7 @@ public class LoginPageController {
     @FXML
     public PasswordField passwordInput;
     @FXML
-    
+
 
     private static final File accountDatabase = new File("accountDatabase.txt");
     public Text errorText;

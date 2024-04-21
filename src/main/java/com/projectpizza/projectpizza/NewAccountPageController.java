@@ -43,13 +43,13 @@ public class NewAccountPageController {
             return;
         }
         AccountHandler.addAccountToDatabase(phoneInput.getText().replaceAll("\\D+",""),
-                                                passwordInput.getText(),
-                                                firstNameInput.getText(),
-                                                lastNameInput.getText(),
-                                                addressStreetInput.getText(),
-                                                addressCityInput.getText(),
-                                                addressStateInput.getText(),
-                                                addressZipInput.getText());
+                passwordInput.getText(),
+                firstNameInput.getText(),
+                lastNameInput.getText(),
+                addressStreetInput.getText(),
+                addressCityInput.getText(),
+                addressStateInput.getText(),
+                addressZipInput.getText());
         Session.setPhoneNumber(phoneInput.getText().replaceAll("\\D+",""));
 
         try{

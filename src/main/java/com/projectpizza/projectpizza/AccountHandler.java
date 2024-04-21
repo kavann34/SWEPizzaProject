@@ -65,7 +65,7 @@ public class AccountHandler {
                         return "Success";
                     }
                     else return "Invalid Password";
-                    }
+                }
             }
             return "Account Does Not Exist";
         } catch (FileNotFoundException e) {
