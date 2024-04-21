@@ -25,7 +25,7 @@ public class OrderHandler {
         }
         return false;
     }
-    public static void readOrderDatabase(){
+    public static String readOrderDatabase(){
         try(Scanner sc = new Scanner(orderDatabase)) {
             String line;
             String[] split;
@@ -36,5 +36,6 @@ public class OrderHandler {
             }
         } catch (FileNotFoundException e) {
         }
+        return null;
     }
 }

@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.projectpizza.projectpizza.OrderHandler.readOrderDatabase;
+
 public class OrderSummaryPageController {
     public void onLogoutButtonPress(ActionEvent event) {
         Session.setPhoneNumber("");
@@ -45,7 +47,7 @@ public class OrderSummaryPageController {
     @FXML
     private TextArea orderTextArea;
 
-    String[] test = {"one", "two", "three", "two", "three", "two", "three"}; //Will be changed to read order's values once menu is complete
+    String[] test = {readOrderDatabase()}; //*done,Will be changed to read order's values once menu is complete
 
     @FXML
     public void initialize() {
