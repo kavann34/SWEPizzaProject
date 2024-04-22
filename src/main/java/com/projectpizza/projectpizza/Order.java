@@ -14,6 +14,7 @@ public  class Order {
     }
 
     public void updateTotal() {
+        this.total = 0;
         for (MenuItem item : orderItems ) {
             total += item.price + item.toppings.size()*50;
         }
@@ -26,7 +27,7 @@ public  class Order {
             orderDetails.append(item);
         }
         updateTotal();
-        orderDetails.append("$" + getTotal());
+        orderDetails.append("\t\t\t\t\t\t...Total $" + getTotal());
         return orderDetails.toString();
 
     }

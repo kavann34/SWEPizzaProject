@@ -51,7 +51,9 @@ public class OrderSummaryPageController {
 
     @FXML
     public void initialize() {
-      orderTextArea.setText(Session.getCurrentOrder().toString());
+        if(Session.getCurrentOrder() != null) {
+        orderTextArea.setText(Session.getCurrentOrder().toString());
+        }
     }
 
 }

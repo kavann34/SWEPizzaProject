@@ -56,6 +56,7 @@ public class LoginPageController {
     public void onLoginButtonPress(ActionEvent event) {
         String logInResult = AccountHandler.login(phoneInput.getText().replaceAll("\\D+",""), passwordInput.getText());
         if(logInResult.equals("Success")) {
+            OrderHandler.readOrderDatabase();
             goToMenu(event);
         } else {
             errorText.setText(logInResult);

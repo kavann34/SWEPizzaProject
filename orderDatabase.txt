@@ -7,17 +7,17 @@ StartOrder
 7701234567
 14"", Pizza, Regular Crust, 1500
 Toppings:Pepperoni,Tomato
-10"", Pizza, Regular Crust, 1100
-Toppings:Spinach,Extra Sauce
+Medium", Drink, Fanta, 300
 EndOrder
 StartOrder
-7701234567
-12"", Pizza, Regular Crust, 1300
-Toppings:Pepperoni,Tomato
+6785551234
+16"", Pizza, Deep Dish, 1700
+Toppings:Sausage,Peppers
 EndOrder
 StartOrder
-7701234567
-12"", Pizza, Regular Crust, 1300
-Toppings:Pepperoni,Tomato
-Medium", Drink, Coke, 300
+6785551234
+16"", Pizza, Deep Dish, 1700
+Toppings:Sausage,Peppers
+14"", Pizza, Regular Crust, 1450
+Toppings:Pepperoni
 EndOrder

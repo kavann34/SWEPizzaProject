@@ -14,7 +14,6 @@ public class OrderHandler {
             try (FileWriter writer = new FileWriter(orderDatabase, true)) {
                 writer.append("StartOrder\n");
                 writer.append(Session.getPhoneNumber() + "\n");
-
                 for (MenuItem item : order.orderItems) {
                     StringBuilder itemEntry = new StringBuilder();
                     itemEntry.append(item.getSize() + "\", " + item.getName() + ", " + item.getType() + ", " + item.getPrice());
@@ -26,10 +25,8 @@ public class OrderHandler {
                         }
                         itemEntry.deleteCharAt(itemEntry.length() - 1);
                     }
-
                     writer.append(itemEntry.toString() + "\n");
                 }
-
                 writer.append("EndOrder\n");
                 return true;
             } catch (IOException e) {
@@ -40,23 +37,21 @@ public class OrderHandler {
         return false;
     }
 
-
     public static void readOrderDatabase() {
         try (Scanner sc = new Scanner(orderDatabase)) {
             Order currentOrder = null;
+            Order lastValidOrder = null;
             boolean orderFound = false;
-
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().trim();
-
                 if (line.equals("StartOrder")) {
                     currentOrder = new Order(Session.getPhoneNumber());
+                    orderFound = false;
                 }
                 else if (line.equals("EndOrder")) {
                     if (orderFound && currentOrder != null) {
                         currentOrder.updateTotal();
-                        Session.setCurrentOrder(currentOrder);
-                        return;
+                        lastValidOrder = currentOrder;
                     }
                     orderFound = false;
                     currentOrder = null;
@@ -66,31 +61,30 @@ public class OrderHandler {
                 }
                 else if (orderFound && currentOrder != null && !line.isEmpty()) {
                     if (line.startsWith("Toppings:")) {
-                        String toppingsLine = line.substring(9);
+                        String toppingsLine = line.substring("Toppings:".length());
                         String[] toppings = toppingsLine.split(",");
                         MenuItem lastItem = currentOrder.orderItems.get(currentOrder.orderItems.size() - 1);
                         for (String topping : toppings) {
                             lastItem.toppings.add(new Topping(topping.trim()));
                         }
                     } else {
-                        String[] parts = line.split(", ");
-                        if (parts.length >= 4) {
-                            String size = parts[0].replace("\"", "");
-                            String name = parts[1];
-                            String type = parts[2];
-                            int price = Integer.parseInt(parts[3]);
+                        String[] menuItemAttributes = line.split(", ");
+                        if (menuItemAttributes.length >= 4) {
+                            String size = menuItemAttributes[0].replace("\"", "");
+                            String name = menuItemAttributes[1];
+                            String type = menuItemAttributes[2];
+                            int price = Integer.parseInt(menuItemAttributes[3]);
                             MenuItem item = new MenuItem(name, price, size, type);
                             currentOrder.orderItems.add(item);
                         }
                     }
                 }
             }
+            if (lastValidOrder != null) {
+                Session.setCurrentOrder(lastValidOrder);
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
-
-
-
-
 }
