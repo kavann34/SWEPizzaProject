@@ -6,6 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Holds some methods used for adding and reading the account info from the database
+ * originally meant to hold the accounts too in an OO-style database structure, but
+ * most of it was scrapped for time because the requirements only needed text files.
+ */
 public class AccountHandler {
     private static final File accountDatabase = new File("accountDatabase.txt");
 

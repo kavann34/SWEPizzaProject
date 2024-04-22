@@ -15,6 +15,11 @@ import java.io.IOException;
 
 public class OrderSummaryPageController {
     private static final File orderDatabase = new File("orderDatabase.txt");
+
+    /**
+     * Resets the session phone number and returns to the login screen.
+     * @param event
+     */
     public void onLogoutButtonPress(ActionEvent event) {
         Session.setPhoneNumber("");
         try{
@@ -30,7 +35,10 @@ public class OrderSummaryPageController {
     }
 
 
-
+    /**
+     * Returns to the menu page.
+     * @param event
+     */
     public void onMenuButtonPress(ActionEvent event) {
         try{
             Parent menuPageSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
@@ -49,6 +57,9 @@ public class OrderSummaryPageController {
     private TextArea orderTextArea;
 
 
+    /**
+     * Loads in the order information into the order summary screen when the screen is accessed.
+     */
     @FXML
     public void initialize() {
         if(Session.getCurrentOrder() != null) {

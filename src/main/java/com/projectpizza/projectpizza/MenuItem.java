@@ -2,6 +2,11 @@ package com.projectpizza.projectpizza;
 
 import java.util.ArrayList;
 
+/**
+ * This class holds the information for either pizza's or drinks. If it is "Pizza" then the toppings array will
+ * be filled with selected toppings. Includes some methods for printing out the menuItem's information
+ * and some common attributes to go with it.
+ */
 public class MenuItem {
     protected ArrayList<Topping> toppings = new ArrayList<>();
     protected String name;

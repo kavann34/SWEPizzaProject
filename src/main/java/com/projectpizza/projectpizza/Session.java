@@ -1,5 +1,9 @@
 package com.projectpizza.projectpizza;
 
+/**
+ * This class is used for tracking the current user's ID, which is the phone number,
+ * and their current and latest order.
+ */
 public class Session {
     private static String phoneNumber;
     private static Order currentOrder;

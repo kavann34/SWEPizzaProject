@@ -26,6 +26,10 @@ public class LoginPageController {
     private static final File accountDatabase = new File("accountDatabase.txt");
     public Text errorText;
 
+    /**
+     * Switches to new account screen.
+     * @param event
+     */
     @FXML
     protected void goToNewAccountPage(ActionEvent event) {
         try{
@@ -40,6 +44,10 @@ public class LoginPageController {
         }
     }
 
+    /**
+     * Switches to menu screen.
+     * @param event
+     */
     public void goToMenu(ActionEvent event) {
         try{
             Parent menuPageSceneRoot = FXMLLoader.load(getClass().getResource("menu-page.fxml"));
@@ -53,6 +61,11 @@ public class LoginPageController {
         }
     }
 
+    /**
+     * Calls the login method on the AccountHandler and gets a result based on the input entered into the text and password fields.
+     * Also trims symbols from the phone number and then either goes to the menu page or gives the users an error message.
+     * @param event
+     */
     public void onLoginButtonPress(ActionEvent event) {
         String logInResult = AccountHandler.login(phoneInput.getText().replaceAll("\\D+",""), passwordInput.getText());
         if(logInResult.equals("Success")) {
@@ -64,10 +77,18 @@ public class LoginPageController {
 
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onPhoneReturnPress(ActionEvent event) {
         onLoginButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onPasswordReturnPress(ActionEvent event) {
         onLoginButtonPress(event);
     }

@@ -25,6 +25,11 @@ public class NewAccountPageController {
     public TextField addressZipInput;
     public Text passwordErrorText;
 
+    /**
+     * Reads all the entered information and writes the info to the accountDatabase text file.
+     * Then goes back to the login page if no errors were given.
+     * @param event
+     */
     public void onSubmitButtonPress(ActionEvent event) {
         if(phoneInput.getText().isEmpty() ||
                 lastNameInput.getText().isEmpty() ||
@@ -64,6 +69,10 @@ public class NewAccountPageController {
         }
     }
 
+    /**
+     * Returns to the login page.
+     * @param event
+     */
     public void onBackButtonPress(ActionEvent event) {
         try{
             Parent loginPageSceneRoot = FXMLLoader.load(getClass().getResource("login-page.fxml"));
@@ -77,30 +86,66 @@ public class NewAccountPageController {
         }
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onPhoneReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onFirstNameReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onLastNameReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onPasswordConfirmationReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onPasswordReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onStreetReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onCityReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onStateReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 
+    /**
+     * This just lets you hit the return key instead of having to click the login button when typing your account info in.
+     * @param event
+     */
     public void onZipReturnPress(ActionEvent event) {onSubmitButtonPress(event);
     }
 }

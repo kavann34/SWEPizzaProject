@@ -2,6 +2,10 @@ package com.projectpizza.projectpizza;
 
 import java.util.ArrayList;
 
+/**
+ * This class holds the order used in Session and some common methods for printing out the order
+ * and storing and calculating the total. It holds an array of menuItems, which can hold Toppings if it's "Pizza".
+ */
 public  class Order {
     private int total;
     private String phone;

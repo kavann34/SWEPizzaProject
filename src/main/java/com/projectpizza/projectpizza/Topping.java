@@ -1,5 +1,8 @@
 package com.projectpizza.projectpizza;
 
+/**
+ * This class holds toppings, used to be stored in menu items if they are "Pizza".
+ */
 public class Topping {
     protected String name;
 

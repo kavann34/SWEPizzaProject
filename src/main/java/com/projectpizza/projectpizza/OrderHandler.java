@@ -9,6 +9,12 @@ import java.util.Scanner;
 public class OrderHandler {
     private static final File orderDatabase = new File("orderDatabase.txt");
 
+    /**
+     * Takes in an order and writes all the information to the database text file  with markers for
+     * where orders, toppings, and order ends.
+     * @param order
+     * @return
+     */
     public static boolean writeOrderToDatabase(Order order) {
         if (orderDatabase != null) {
             try (FileWriter writer = new FileWriter(orderDatabase, true)) {
@@ -37,10 +43,16 @@ public class OrderHandler {
         return false;
     }
 
+    /**
+     * To be called when the user logs in, goes down the orderDatabase text file
+     * updating the current order with the latest version that it finds matching the phone
+     * number of the current user Session's phone number. It instantiates everything again so that
+     * it can be read into the order summary page again when the user logs back in.
+     */
     public static void readOrderDatabase() {
         try (Scanner sc = new Scanner(orderDatabase)) {
             Order currentOrder = null;
-            Order lastValidOrder = null;
+            Order latestValidOrder = null;[]
             boolean orderFound = false;
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().trim();
@@ -51,7 +63,7 @@ public class OrderHandler {
                 else if (line.equals("EndOrder")) {
                     if (orderFound && currentOrder != null) {
                         currentOrder.updateTotal();
-                        lastValidOrder = currentOrder;
+                        latestValidOrder = currentOrder;
                     }
                     orderFound = false;
                     currentOrder = null;
@@ -80,8 +92,8 @@ public class OrderHandler {
                     }
                 }
             }
-            if (lastValidOrder != null) {
-                Session.setCurrentOrder(lastValidOrder);
+            if (latestValidOrder != null) {
+                Session.setCurrentOrder(latestValidOrder);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

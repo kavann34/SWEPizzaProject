@@ -39,8 +39,6 @@ public class MenuPageController {
     public RadioButton thinCrustRadio;
     public RadioButton regularCrustRadio;
     public RadioButton deepDishRadio;
-
-    public static ArrayList<String> order = new ArrayList<>();
     public RadioButton teaRadio;
     public RadioButton lemonadeRadio;
     public RadioButton waterRadio;
@@ -72,6 +70,12 @@ public class MenuPageController {
     }
 
 
+    /**
+     * Reads all the selections on the menu page, then instantiates the necessary menuItems or toppings.
+     * Then adds the order to the current session for access by the order summary screen.
+     * Resets selections and then calls the method for writing the order to the database text file.
+     * @param event
+     */
     public void onDrinkAddToOrderPress(ActionEvent event) {
         if (Session.getCurrentOrder() == null) {
             Session.setCurrentOrder(new Order(Session.getPhoneNumber()));
@@ -112,6 +116,9 @@ public class MenuPageController {
             }
         }
 
+    /**
+     * Resets the menu selections, to be called after pressing the add to order button.
+     */
     public void resetPizzaSelections() {
         tenInchSizeRadio.setSelected(false);
         twelveInchSizeRadio.setSelected(false);
@@ -134,6 +141,10 @@ public class MenuPageController {
         olivesCheckbox.setSelected(false);
     }
 
+    /**
+     * Resets the session info, then returns to the login screen.
+     * @param event
+     */
     public void onLogoutButtonPress(ActionEvent event) {
         Session.setPhoneNumber("");
         try {
@@ -165,7 +176,9 @@ public class MenuPageController {
     }
 
 
-
+    /**
+     * Resets the menu selections, for use after pressing the add to order button.
+     */
     public void resetDrinkSelections() {
         smallDrinkRadio.setSelected(false);
         mediumDrinkRadio.setSelected(false);
@@ -188,6 +201,12 @@ public class MenuPageController {
         }
     }
 
+    /**
+     * Reads all the selections on the menu page, then instantiates the necessary menuItems or toppings.
+     * Then adds the order to the current session for access by the order summary screen.
+     * Resets selections and then calls the method for writing the order to the database text file.
+     * @param event
+     */
     public void onPizzaAddToOrderPress(ActionEvent event) {
             if (Session.getCurrentOrder() == null) {
                 Session.setCurrentOrder(new Order(Session.getPhoneNumber()));
