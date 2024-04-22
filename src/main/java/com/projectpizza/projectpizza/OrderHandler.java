@@ -52,7 +52,7 @@ public class OrderHandler {
     public static void readOrderDatabase() {
         try (Scanner sc = new Scanner(orderDatabase)) {
             Order currentOrder = null;
-            Order latestValidOrder = null;[]
+            Order latestValidOrder = null;
             boolean orderFound = false;
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().trim();
