@@ -2,7 +2,7 @@ package com.projectpizza.projectpizza;
 
 import java.util.ArrayList;
 
-public class Order {
+public  class Order {
     private int total;
     private String phone;
     public ArrayList<MenuItem> orderItems = new ArrayList<>();
@@ -25,7 +25,10 @@ public class Order {
         for (MenuItem item : orderItems) {
             orderDetails.append(item);
         }
+        updateTotal();
+        orderDetails.append("$" + getTotal());
         return orderDetails.toString();
+
     }
 
     public Order(String phone) {

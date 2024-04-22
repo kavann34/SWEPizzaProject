@@ -48,45 +48,10 @@ public class OrderSummaryPageController {
     @FXML
     private TextArea orderTextArea;
 
-    //@FXML
-    //public void initialize() {
-    //    StringBuilder sb = new StringBuilder();
-    //    for(String item: MenuPageController.order) {
-    //        sb.append(item + ", ");
-    //    }
-    //    sb.delete(sb.length() - 2, sb.length());
-    //    String s = sb.toString();
-    //    orderTextArea.appendText(s);
-    //    orderTextArea.setEditable(false);
-    //    orderTextArea.setWrapText(true);
-    //}
-    String[] test = {"one", "two", "three", "two", "three", "two", "three"}; //Will be changed to read order's values once menu is complete
 
     @FXML
     public void initialize() {
-        StringBuilder sb = new StringBuilder();
-        for(String item: test) {
-            sb.append(item + ", ");
-        }
-        sb.delete(sb.length()-2, sb.length());
-        String s = sb.toString();
-        orderTextArea.appendText(s);
-        orderTextArea.setEditable(false);
-        orderTextArea.setWrapText(true);
+      orderTextArea.setText(Session.getCurrentOrder().toString());
     }
-    //public void onSubmitOrderPress(ActionEvent actionEvent) {
-    //    String finalOrder = Session.getPhoneNumber() + ", ";
-    //    StringBuilder sb = new StringBuilder();
-    //    for(String item: MenuPageController.order) {
-    //        sb.append(item + ", ");
-    //    }
-    //    sb.delete(sb.length() - 2, sb.length());
-    //    finalOrder += sb.toString();
-//
-    //    try (FileWriter writer = new FileWriter(orderDatabase)) {
-    //        writer.write(finalOrder);
-    //    } catch (IOException e) {
-    //        e.printStackTrace();
-    //    }
-    //}
+
 }

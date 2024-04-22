@@ -9,6 +9,10 @@ public class MenuItem {
     protected String size;
     protected String type;
 
+    public int getPrice() {
+        return price;
+    }
+
     public MenuItem(String name, int price, String size, String type) {
         this.name = name;
         this.price = price;
@@ -20,7 +24,7 @@ public class MenuItem {
     public String toString() {
         StringBuilder item = new StringBuilder();
         if(getName().equals("Pizza")) {
-            item.append(getSize() + " - " + getType() + " - " + getName() + "\t" + getPrice() + "\n");
+            item.append(getSize() + " - " + getType() + " - " + getName() + "\t" + "$" + getPriceForToString() + "\n");
             for (Topping topping : toppings) {
                 item.append("\t+" + topping + "\n");
             }
@@ -54,8 +58,10 @@ public class MenuItem {
         this.name = name;
     }
 
-    public int getPrice() {
-        return price;
+    public String getPriceForToString() {
+        int dollars = price/100;
+        int cents = price % 100;
+        return dollars + "." + cents;
     }
 
     public void setPrice(int price) {

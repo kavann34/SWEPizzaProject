@@ -41,7 +41,6 @@ public class MenuPageController {
     public RadioButton deepDishRadio;
 
     public static ArrayList<String> order = new ArrayList<>();
-    public static Order newOrder = new Order(Session.getPhoneNumber());
     public RadioButton teaRadio;
     public RadioButton lemonadeRadio;
     public RadioButton waterRadio;
@@ -72,150 +71,55 @@ public class MenuPageController {
         }
     }
 
-    public void onPizzaAddToOrderPress(ActionEvent event) {
-        if (tenInchSizeRadio.isPressed() || twelveInchSizeRadio.isPressed() || fourteenInchSizeRadio.isPressed() || sixteenInchSizeRadio.isPressed()) {
-            Toggle size = pizzaSize.getSelectedToggle();
-            Toggle crust = crustType.getSelectedToggle();
-            MenuItem newPizza = new MenuItem("Pizza", Integer.parseInt(size.getUserData().toString()), size.getUserData() + "\"", ((RadioButton) crust).getText());
-            if (extraCheeseCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Extra Cheese"));
-            }
-            if (pepperoniCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Pepperoni"));
-            }
-            if (sausageCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Sausage"));
-            }
-            if (peppersCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Peppers"));
-            }
-            if (mushroomsCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Mushroom"));
-            }
-            if (baconCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Bacon"));
-            }
-            if (pineappleCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Pineapple"));
-            }
-            if (spinachCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Spinach"));
-            }
-            if (extraSauceCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Extra Sauce"));
-            }
-            if (onionsCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Onion"));
-            }
-            if (olivesCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Olive"));
-            }
-            if (tomatoCheckbox.isSelected()) {
-                newPizza.toppings.add(new Topping("Tomato"));
-            }
-            newOrder.orderItems.add(newPizza);
-        resetSelections();
-        OrderHandler.writeOrderToDatabase(newOrder);
-        }
-    }
+
     public void onDrinkAddToOrderPress(ActionEvent event) {
-        int price;
-        String size;
-        if (smallDrinkRadio.isSelected() || mediumDrinkRadio.isSelected() || largeDrinkRadio.isSelected()) {
-            if(smallDrinkRadio.isSelected()) {
-                price = 200;
-                size = "Small";
-            } else if (mediumDrinkRadio.isSelected()) {
-                price = 300;
-                size = "Medium";
-            }else {
-                price = 400;
-                size = "Large";
+        if (Session.getCurrentOrder() == null) {
+            Session.setCurrentOrder(new Order(Session.getPhoneNumber()));
+        }
+            int price;
+            String size;
+            if (smallDrinkRadio.isSelected() || mediumDrinkRadio.isSelected() || largeDrinkRadio.isSelected()) {
+                if (smallDrinkRadio.isSelected()) {
+                    price = 200;
+                    size = "Small";
+                } else if (mediumDrinkRadio.isSelected()) {
+                    price = 300;
+                    size = "Medium";
+                } else {
+                    price = 400;
+                    size = "Large";
+                }
+                if (spriteRadio.isSelected()) {
+                    Session.getCurrentOrder().orderItems.add(new MenuItem("Drink", price, size, "Sprite"));
+                }
+                if (fantaRadio.isSelected()) {
+                    Session.getCurrentOrder().orderItems.add(new MenuItem("Drink", price, size, "Fanta"));
+                }
+                if (cokeRadio.isSelected()) {
+                    Session.getCurrentOrder().orderItems.add(new MenuItem("Drink", price, size, "Coke"));
+                }
+                if (waterRadio.isSelected()) {
+                    Session.getCurrentOrder().orderItems.add(new MenuItem("Drink", price, size, "Water"));
+                }
+                if (teaRadio.isSelected()) {
+                    Session.getCurrentOrder().orderItems.add(new MenuItem("Drink", price, size, "Tea"));
+                }
+                if (lemonadeRadio.isSelected()) {
+                    Session.getCurrentOrder().orderItems.add(new MenuItem("Drink", price, size, "Lemonade"));
+                }
+                resetDrinkSelections();
+                OrderHandler.writeOrderToDatabase(Session.getCurrentOrder());
             }
-            if (spriteRadio.isSelected()) {
-                newOrder.orderItems.add(new MenuItem("Drink",price,size, "Sprite"));
-            }
-            if (fantaRadio.isSelected()) {
-                newOrder.orderItems.add(new MenuItem("Drink",price,size, "Fanta"));
-            }
-            if (cokeRadio.isSelected()) {
-                newOrder.orderItems.add(new MenuItem("Drink",price,size, "Coke"));
-            }
-            if (waterRadio.isSelected()) {
-                newOrder.orderItems.add(new MenuItem("Drink",price,size, "Water"));
-            }
-            if (teaRadio.isSelected()) {
-                newOrder.orderItems.add(new MenuItem("Drink",price,size, "Tea"));
-            }
-            if (lemonadeRadio.isSelected()) {
-                newOrder.orderItems.add(new MenuItem("Drink",price,size, "Lemonade"));
-            }
-        resetDrinkSelections();
-        OrderHandler.writeOrderToDatabase(newOrder);
         }
 
-        // Possibly a method to write to a file or database (not shown here)
-        // OrderHandler.writeOrderToDatabase(newOrder);
-
-        // StringBuilder drinkOrder = new StringBuilder();
-        //
-        // if (smallDrinkRadio.isSelected()) {
-        //     drinkOrder.append("Small ");
-        // } else if (mediumDrinkRadio.isSelected()) {
-        //     drinkOrder.append("Medium ");
-        // } else if (largeDrinkRadio.isSelected()) {
-        //     drinkOrder.append("Large ");
-        // }
-        //
-        // if (spriteCheckbox.isSelected()) {
-        //     drinkOrder.append("Sprite, ");
-        // }
-        // if (fantaCheckbox.isSelected()) {
-        //     drinkOrder.append("Fanta, ");
-        // }
-        // if (cokeCheckbox.isSelected()) {
-        //     drinkOrder.append("Coke, ");
-        // }
-        // if (waterCheckbox.isSelected()) {
-        //     drinkOrder.append("Water, ");
-        // }
-        // if (teaCheckbox.isSelected()) {
-        //     drinkOrder.append("Tea, ");
-        // }
-        // if (lemonadeCheckbox.isSelected()) {
-        //     drinkOrder.append("Lemonade, ");
-        // }
-        //
-        // if (drinkOrder.length() > 0) {
-        //     drinkOrder.setLength(drinkOrder.length() - 2);
-        // }
-        //
-        // writeDrinkToFile(drinkOrder.toString());
-        // resetDrinkSelections();
-    }
-    //public void writePizzaToFile(String size, String toppings) {
-    //    try (BufferedWriter writer = new BufferedWriter(new FileWriter("orderDatabase.txt", true))) {
-    //        writer.write("Size: " + size + ", Toppings: " + toppings);
-    //        writer.newLine();
-    //    } catch (IOException e) {
-    //        e.printStackTrace();
-    //    }
-    //}
-
-    // public static void setOrderItems(String size, String toppings) {
-    //     order.add(size);
-    //     String[] split;
-    //     split = toppings.split(", ");
-    //     for (String item : split) {
-    //         order.add(item);
-    //     }
-    //     order.add("\n");
-    // }
-
-    public void resetSelections() {
-        pizzaSize.selectToggle(null);
-        crustType.selectToggle(null);
-        drinkSize.selectToggle(null);
+    public void resetPizzaSelections() {
+        tenInchSizeRadio.setSelected(false);
+        twelveInchSizeRadio.setSelected(false);
+        fourteenInchSizeRadio.setSelected(false);
+        sixteenInchSizeRadio.setSelected(false);
+        thinCrustRadio.setSelected(false);
+        regularCrustRadio.setSelected(false);
+        deepDishRadio.setSelected(false);
         extraCheeseCheckbox.setSelected(false);
         pepperoniCheckbox.setSelected(false);
         sausageCheckbox.setSelected(false);
@@ -283,4 +187,67 @@ public class MenuPageController {
             e.printStackTrace();
         }
     }
+
+    public void onPizzaAddToOrderPress(ActionEvent event) {
+            if (Session.getCurrentOrder() == null) {
+                Session.setCurrentOrder(new Order(Session.getPhoneNumber()));
+        }
+        if (tenInchSizeRadio.isSelected() || twelveInchSizeRadio.isSelected() || fourteenInchSizeRadio.isSelected() || sixteenInchSizeRadio.isSelected()) {
+            Toggle size = pizzaSize.getSelectedToggle();
+            Toggle crust = crustType.getSelectedToggle();
+            MenuItem newPizza = new MenuItem("Pizza", Integer.parseInt(size.getUserData().toString())*100, size.getUserData() + "\"", ((RadioButton) crust).getText());
+            if (extraCheeseCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Extra Cheese"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (pepperoniCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Pepperoni"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (sausageCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Sausage"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (peppersCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Peppers"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (mushroomsCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Mushroom"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (baconCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Bacon"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (pineappleCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Pineapple"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (spinachCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Spinach"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (extraSauceCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Extra Sauce"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (onionsCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Onion"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (olivesCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Olive"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            if (tomatoCheckbox.isSelected()) {
+                newPizza.toppings.add(new Topping("Tomato"));
+                newPizza.setPrice(newPizza.getPrice()+ 50);
+            }
+            Session.getCurrentOrder().orderItems.add(newPizza);
+            resetPizzaSelections();
+            OrderHandler.writeOrderToDatabase(Session.getCurrentOrder());
+        }
+    }
 }
+

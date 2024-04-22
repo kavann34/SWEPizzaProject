@@ -1,1 +1,23 @@
-Small - Coke - Drink
+StartOrder
+7701234567
+14"", Pizza, Regular Crust, 1500
+Toppings:Pepperoni,Tomato
+EndOrder
+StartOrder
+7701234567
+14"", Pizza, Regular Crust, 1500
+Toppings:Pepperoni,Tomato
+10"", Pizza, Regular Crust, 1100
+Toppings:Spinach,Extra Sauce
+EndOrder
+StartOrder
+7701234567
+12"", Pizza, Regular Crust, 1300
+Toppings:Pepperoni,Tomato
+EndOrder
+StartOrder
+7701234567
+12"", Pizza, Regular Crust, 1300
+Toppings:Pepperoni,Tomato
+Medium", Drink, Coke, 300
+EndOrder
